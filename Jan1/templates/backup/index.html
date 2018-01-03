@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Hack A Team</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+
+
+<style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    .leaflet-popup-content {
+  width:auto !important;
+  }
+  #map
+  {
+      width: 100px;
+      height:100px;
+      min-height: 50%;
+      min-width: 50%;
+      display: block;
+  }
+
+  html, body
+  {
+      height: 50%;
+  }
+
+  #map-holder{
+      height: 50%;
+  }
+
+  .fill
+  {
+      min-height: 50%;
+      height: 50%;
+      width: 50%;
+      max-width: 50%;
+  }
+
+  .container{
+      max-width:60em;
+      padding: 0.2em;
+  }
+</style>
+
+
+</head>
+
+
+<body>
+<div id="map-holder">
+  <div class="container fill">
+    <div id="map">{% include 'mainMap.html' %}</div>
+  </div>
+
+
+
+</body>
+</html>

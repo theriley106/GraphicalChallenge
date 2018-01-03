@@ -15,7 +15,7 @@ def readCSVs():
 		with open(csvFile, 'rb') as f:
 			reader = csv.reader(f)
 			your_list = list(reader)
-			for your_listz in your_list[:100000]:
+			for your_listz in your_list:
 				try:
 					DATABASE.append({"Lat": your_listz[2], "Long": your_listz[1]})
 				except Exception as exp:
@@ -29,5 +29,6 @@ def index():
 if __name__ == "__main__":
 	readCSVs()
 	DATABASE = [dict(t) for t in set([tuple(d.items()) for d in DATABASE])]
+	DATABASE = DATABASE[:500]
 	print(len(DATABASE))
 	app.run(host='0.0.0.0', port=8888)
