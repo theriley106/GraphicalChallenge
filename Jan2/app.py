@@ -1,7 +1,11 @@
 import csv
 import datetime
+from flask import Flask, request, render_template, request, url_for, redirect, Markup, Response, send_file, send_from_directory, make_response, jsonify
 
-DATABASE = []
+import operator
+app = Flask(__name__)
+
+DATABASE = [0]
 
 count = {}
 for num in range(31):
@@ -25,8 +29,14 @@ def returnAllComments():
 				count[str(returnTime(value[1]))] += str(value[0]).lower().count('$tsla')
 				count[str(returnTime(value[1]))] += str(value[0]).lower().count('tesla')
 
+@app.route('/', methods=['GET'])
+def index():
+	return render_template("index.html", DATABASE=DATABASE)
+
 if __name__ == '__main__':
 	returnAllComments()
-	for key, value in count.items():
-		print("{} - {}".format(key, value))
-	
+	count = sorted(count.items(), key=operator.itemgetter(0))
+	print count
+	for key, value in count:
+		DATABASE.append(value)
+	app.run(host='127.0.0.1', port=8000)
