@@ -35,11 +35,11 @@ def returnAllComments(stock):
 				count[str(returnTime(value[1]))] += str(value[0]).lower().count('${}'.format(stock))
 				count[str(returnTime(value[1]))] += str(value[0]).lower().count('{}'.format(stock))
 	return count
-@app.route('/<stock>', methods=['GET'])
+@app.route('/stock/<stock>', methods=['GET'])
 def index(stock):
 	count = returnAllComments(stock)
 	count = sorted(count.items(), key=operator.itemgetter(0))
-	print count
+	#print count
 	for key, value in count:
 		DATABASE.append(value)
 	allDays = []
@@ -61,4 +61,4 @@ def index(stock):
 
 if __name__ == '__main__':
 	
-	app.run(host='127.0.0.1', port=8000)
+	app.run(host='0.0.0.0', port=8000)
