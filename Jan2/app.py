@@ -36,7 +36,6 @@ def index():
 if __name__ == '__main__':
 	returnAllComments()
 	count = sorted(count.items(), key=operator.itemgetter(0))
-	print count
 	for key, value in count:
 		DATABASE.append(value)
 	app.run(host='127.0.0.1', port=8000)
