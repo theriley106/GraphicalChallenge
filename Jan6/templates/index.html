@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Pie Chart</title>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.bundle.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+
+<body>
+    <div id="canvas-holder" style="width:40%">
+        <canvas id="chart-area" />
+    </div>
+    <script>
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+
+                    {{ belowAveragePrice }},
+                    {{ aboveAveragePrice }},
+                ],
+                backgroundColor: [
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                "Below Average Price in SC",
+                "Above Average Price in SC",
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myPie = new Chart(ctx, config);
+    };
+
+    </script>
+</body>
+
+</html>
