@@ -27,7 +27,7 @@ width:auto !important;
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoidGhlcmlsZXkxMDYiLCJhIjoiY2o4cm1xZzdnMTgzMDMzbnR1d3Q2Y2p6byJ9.C-Kuwbt67fBaEg0V5rGXzg';
-var map = L.mapbox.map('map', 'mapbox.streets').setView([34.671494, -82.859564], 18.00);
+var map = L.mapbox.map('map', 'mapbox.streets').setView([34.671917, -82.889385], 13.00);
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -40,9 +40,7 @@ var geoJson = [
     type: "Feature",
     "geometry": { "type": "Point", "coordinates": [{{ info.Lat }}, {{ info.Long }}]},
     "properties": {
-        "url": "google.com",
         "marker-color": "#ff8888",
-        "city": "Testing",
     }
 },
 

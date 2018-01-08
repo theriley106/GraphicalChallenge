@@ -5,7 +5,7 @@ import csv
 app = Flask(__name__)
 
 DATABASE = []
-BUSNUM = raw_input("Bus Number: ")
+BUSNUM = "4012715"
 
 def returnAllCSV(busNum):
 	return glob.glob('datapoints/{}.csv'.format(busNum))
@@ -24,7 +24,7 @@ def readCSVs():
 
 @app.route('/', methods=['GET'])
 def index():
-	return render_template("index.html", DATABASE=DATABASE, BUSNUM=BUSNUM)
+	return render_template("Jan1.html", DATABASE=DATABASE, BUSNUM=BUSNUM)
 
 if __name__ == "__main__":
 	readCSVs()
