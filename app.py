@@ -18,12 +18,20 @@ def Jan2():
 	import Jan2
 	return render_template("Jan2.html", DATABASE=Jan2.returnDatabase())
 #This is template for all sites
+
 @app.route('/Jan3', methods=['GET'])
 @app.route('/Jan3/<stock>', methods=['GET'])
 def Jan3(stock="TSLA"):
 	import Jan3
 	return render_template("Jan3.html", DATABASE=Jan3.returnData(stock))
 #This is template for all sites
+
+@app.route('/Jan4/', methods=['GET'])
+def Jan4():
+	import Jan4
+	return render_template("Jan4.html", DATABASE=Jan4.getDatabase())
+#This is template for all sites
+
 
 @app.route('/', methods=['GET'])
 def index():
