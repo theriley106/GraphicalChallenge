@@ -1,9 +1,5 @@
 import glob
-from flask import Flask, request, render_template, request, url_for, redirect, Markup, Response, send_file, send_from_directory, make_response, jsonify
 import csv
-
-
-app = Flask(__name__)
 
 
 BUSNUM = "4012715"
