@@ -1,9 +1,8 @@
 import csv
 import datetime
-from flask import Flask, request, render_template, request, url_for, redirect, Markup, Response, send_file, send_from_directory, make_response, jsonify
-
 import operator
-app = Flask(__name__)
+import glob
+
 
 DATABASE = [0]
 
@@ -21,21 +20,17 @@ def returnTime(timestamp):
 	)
 
 def returnAllComments():
-	with open('wsbcomments.csv', 'rb') as f:
+	with open(glob.glob('static/Jan2.csv')[0], 'rb') as f:
 		reader = csv.reader(f)
 		for value in list(reader)[1:]:
 			if 'tesla' in str(value[0]).lower() or 'tsla' in str(value[0]).lower() or '$tsla' in str(value[0]).lower():
 				count[str(returnTime(value[1]))] += str(value[0]).lower().count('tsla')
 				count[str(returnTime(value[1]))] += str(value[0]).lower().count('$tsla')
 				count[str(returnTime(value[1]))] += str(value[0]).lower().count('tesla')
+returnAllComments()
+count = sorted(count.items(), key=operator.itemgetter(0))
+for key, value in count:
+	DATABASE.append(value)
 
-@app.route('/', methods=['GET'])
-def index():
-	return render_template("index.html", DATABASE=DATABASE)
-
-if __name__ == '__main__':
-	returnAllComments()
-	count = sorted(count.items(), key=operator.itemgetter(0))
-	for key, value in count:
-		DATABASE.append(value)
-	app.run(host='127.0.0.1', port=8000)
+def returnDatabase():
+	return DATABASE
