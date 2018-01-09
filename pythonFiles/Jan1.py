@@ -5,13 +5,14 @@ import csv
 
 app = Flask(__name__)
 
-DATABASE = []
+
 BUSNUM = "4012715"
 
 def returnAllCSV(busNum):
 	return glob.glob('static/Jan1.csv'.format(busNum))
 
 def readCSVs():
+	DATABASE = []
 	for csvFile in returnAllCSV(BUSNUM):
 		with open(csvFile, 'rb') as f:
 			reader = csv.reader(f)
@@ -22,9 +23,10 @@ def readCSVs():
 				except Exception as exp:
 					print exp
 					pass
+	return DATABASE
 
 def genDatabase():
-	readCSVs()
+	DATABASE = readCSVs()
 	DATABASE = [dict(t) for t in set([tuple(d.items()) for d in DATABASE])]
 	DATABASE = DATABASE[:500]
 	return DATABASE
