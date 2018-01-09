@@ -3,6 +3,8 @@ from flask import Flask, request, render_template, request, url_for, redirect, M
 import csv
 import sqlite3 as lite
 import requests
+import sys
+sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__)
 
 @app.route('/Jan1/', methods=['GET'])
