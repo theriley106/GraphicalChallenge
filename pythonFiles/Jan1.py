@@ -5,7 +5,7 @@ import csv
 BUSNUM = "4012715"
 
 def returnAllCSV(busNum):
-	return glob.glob('static/Jan1.csv'.format(busNum))
+	return glob.glob('static/Jan1.csv')
 
 def readCSVs():
 	DATABASE = []

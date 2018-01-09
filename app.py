@@ -45,6 +45,11 @@ def Jan6():
 	return render_template("Jan6.html", belowAveragePrice=belowAveragePrice, aboveAveragePrice=aboveAveragePrice)
 #This is template for all sites
 
+@app.route('/Jan7/', methods=['GET'])
+def Jan7():
+	return render_template("Jan7.html")
+#This is template for all sites
+
 
 @app.route('/', methods=['GET'])
 def index():
