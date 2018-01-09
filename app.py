@@ -32,6 +32,19 @@ def Jan4():
 	return render_template("Jan4.html", DATABASE=Jan4.getDatabase())
 #This is template for all sites
 
+@app.route('/Jan5/', methods=['GET'])
+def Jan5():
+	import Jan5
+	return render_template("Jan5.html", DATABASE=Jan5.getDatabase())
+#This is template for all sites
+
+@app.route('/Jan6/', methods=['GET'])
+def Jan6():
+	import Jan6
+	belowAveragePrice, aboveAveragePrice = Jan6.getDatabase()
+	return render_template("Jan6.html", belowAveragePrice=belowAveragePrice, aboveAveragePrice=aboveAveragePrice)
+#This is template for all sites
+
 
 @app.route('/', methods=['GET'])
 def index():

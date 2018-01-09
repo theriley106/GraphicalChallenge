@@ -1,10 +1,9 @@
 import glob
-from flask import Flask, request, render_template, request, url_for, redirect, Markup, Response, send_file, send_from_directory, make_response, jsonify
 import csv
 import sqlite3 as lite
 import requests
-app = Flask(__name__)
-con = lite.connect('gasPrices.db')
+con = lite.connect(glob.glob('static/Jan6.db')[0])
+
 
 cur = con.cursor()
 cur.execute("DELETE FROM Information")
@@ -38,16 +37,7 @@ def updateDB():
 			print exp
 	con.commit()
 
-
-
-
-
-
-@app.route('/', methods=['GET'])
-def index():
-	return render_template("index.html", belowAveragePrice=a, aboveAveragePrice=(len(Prices) - a))
-
-if __name__ == "__main__":
+def getDatabase():
 	updateDB()
 	Prices = []
 	data = retrieveDB()
@@ -57,6 +47,4 @@ if __name__ == "__main__":
 	for d in Prices:
 		if d < sum(tuple(Prices)) / len(Prices):
 			a += 1
-	print a
-
-	app.run(host='0.0.0.0', port=8888)
+	return (a, (len(Prices) - a))
