@@ -77,6 +77,13 @@ def Jan11():
 	return render_template("Jan11.html", DATABASE=Jan11.getDatabase())
 #This is template for all sites
 
+@app.route('/Jan12/', methods=['GET'])
+def Jan12():
+	import Jan12
+	DATABASE = Jan12.getDatabase()
+	return render_template("Jan12.html", DATABASE=Jan12.getDatabase())
+#This is template for all sites
+
 @app.route('/', methods=['GET'])
 def index():
 	return render_template("index.html")
