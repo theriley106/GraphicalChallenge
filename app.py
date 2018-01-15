@@ -66,36 +66,38 @@ def Jan9():
 @app.route('/Jan10/', methods=['GET'])
 def Jan10():
 	import Jan10
-	DATABASE = Jan10.getDatabase()
 	return render_template("Jan10.html", DATABASE=Jan10.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan11/', methods=['GET'])
 def Jan11():
 	import Jan11
-	DATABASE = Jan11.getDatabase()
 	return render_template("Jan11.html", DATABASE=Jan11.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan12/', methods=['GET'])
 def Jan12():
 	import Jan12
-	DATABASE = Jan12.getDatabase()
 	return render_template("Jan12.html", DATABASE=Jan12.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan13/', methods=['GET'])
 def Jan13():
 	import Jan13
-	DATABASE = Jan13.getDatabase()
 	return render_template("Jan13.html", DATABASE=Jan13.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan14/', methods=['GET'])
 def Jan14():
 	import Jan14
-	DATABASE = Jan14.getDatabase()
 	return render_template("Jan14.html", DATABASE=Jan14.getDatabase())
+#This is template for all sites
+
+@app.route('/Jan15/', methods=['GET'])
+def Jan15():
+	import Jan15
+	DATABASE = Jan15.getDatabase()
+	return render_template("Jan15.html", WSB=DATABASE['WSB'], ALL=DATABASE['ALL'])
 #This is template for all sites
 
 @app.route('/', methods=['GET'])
