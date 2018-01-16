@@ -1,0 +1,12 @@
+[INFO  - 2018-01-16T22:18:19.401Z] GhostDriver - Main - running on port 56883
+[INFO  - 2018-01-16T22:18:20.263Z] Session [289b7c20-fb0b-11e7-a4ba-cbc7aa30955e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-01-16T22:18:20.263Z] Session [289b7c20-fb0b-11e7-a4ba-cbc7aa30955e] - page.customHeaders:  - {}
+[INFO  - 2018-01-16T22:18:20.263Z] Session [289b7c20-fb0b-11e7-a4ba-cbc7aa30955e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-01-16T22:18:20.263Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 289b7c20-fb0b-11e7-a4ba-cbc7aa30955e
+[ERROR - 2018-01-16T22:18:25.802Z] Session [289b7c20-fb0b-11e7-a4ba-cbc7aa30955e] - page.onError - msg: TypeError: null is not an object (evaluating 'document.getElementById('randomizeData').addEventListener')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-01-16T22:18:25.803Z] Session [289b7c20-fb0b-11e7-a4ba-cbc7aa30955e] - page.onError - stack:
+  global code (http://127.0.0.1:5000/Jan15/:304)
+
+  phantomjs://platform/console++.js:263 in error

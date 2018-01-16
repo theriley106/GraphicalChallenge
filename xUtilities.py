@@ -1,11 +1,16 @@
 import glob
 import os
-
-def checkForScreenshot(fileName):
+import time
+from selenium import webdriver
+def checkForScreenshot(date):
+	fileName = "Screenshots/{}.png".format(date)
 	return os.path.isfile(fileName)
 
-def saveScreenshot(url):
-	driver = webdriver.PhantomJS()
-	driver.get(url)
-	driver.save_screenshot('static/{}.png'.format(proxy.partition(':')[0]))
-	driver.quit()
+def saveScreenshot(date):
+	os.system("touch Screenshots/{}.png".format(date))
+	driver = webdriver.Firefox()
+	driver.get('http://127.0.0.1:5000/{}'.format(date))
+	time.sleep(2)
+	driver.save_screenshot('Screenshots/{}.png'.format(date))
+	print("Saved")
+	driver.close()

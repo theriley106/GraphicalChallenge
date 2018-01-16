@@ -4,6 +4,7 @@ from flask import Flask, request, render_template, request, url_for, redirect, M
 import csv
 import sqlite3 as lite
 import requests
+import threading
 import sys
 import xUtilities
 sys.path.insert(0, 'pythonFiles/')
@@ -55,12 +56,20 @@ def Jan7():
 @app.route('/Jan8/', methods=['GET'])
 def Jan8():
 	import Jan8
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	return render_template("Jan8.html", DATABASE=Jan8.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan9/', methods=['GET'])
 def Jan9():
 	import Jan9
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	DATABASE = Jan9.getDatabase()
 	return render_template("Jan9.html", DATABASE=DATABASE, DATA=range(1,len(DATABASE) / 4))
 #This is template for all sites
@@ -68,40 +77,60 @@ def Jan9():
 @app.route('/Jan10/', methods=['GET'])
 def Jan10():
 	import Jan10
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	return render_template("Jan10.html", DATABASE=Jan10.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan11/', methods=['GET'])
 def Jan11():
 	import Jan11
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	return render_template("Jan11.html", DATABASE=Jan11.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan12/', methods=['GET'])
 def Jan12():
 	import Jan12
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	return render_template("Jan12.html", DATABASE=Jan12.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan13/', methods=['GET'])
 def Jan13():
 	import Jan13
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	return render_template("Jan13.html", DATABASE=Jan13.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan14/', methods=['GET'])
 def Jan14():
 	import Jan14
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	return render_template("Jan14.html", DATABASE=Jan14.getDatabase())
 #This is template for all sites
 
 @app.route('/Jan15/', methods=['GET'])
 def Jan15():
 	import Jan15
-	if xUtilities.checkForScreenshot("Screenshots/{}.png".format(sys._getframe().f_code.co_name)) == False:
-		print "Screenshots/{}.png".format(sys._getframe().f_code.co_name)
-		os.system("touch Screenshots/{}.png".format(sys._getframe().f_code.co_name))
-		print("true")
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	#if 
 	DATABASE = Jan15.getDatabase()
 	return render_template("Jan15.html", WSB=DATABASE['WSB'], ALL=DATABASE['ALL'])
@@ -109,6 +138,10 @@ def Jan15():
 
 @app.route('/Jan16/', methods=['GET'])
 def Jan16():
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	return render_template("Jan16.html")
 
 @app.route('/', methods=['GET'])
@@ -116,4 +149,4 @@ def index():
 	return render_template("index.html")
 
 if __name__ == "__main__":
-	app.run(host='0.0.0.0', port=8000)
+	app.run(host='127.0.0.1', port=5000)
