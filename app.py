@@ -100,6 +100,10 @@ def Jan15():
 	return render_template("Jan15.html", WSB=DATABASE['WSB'], ALL=DATABASE['ALL'])
 #This is template for all sites
 
+@app.route('/Jan16/', methods=['GET'])
+def Jan16():
+	return render_template("Jan16.html")
+
 @app.route('/', methods=['GET'])
 def index():
 	return render_template("index.html")
