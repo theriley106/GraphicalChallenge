@@ -19,7 +19,7 @@ performance = barcodes
  
 plt.bar(y_pos, performance, align='center')
 plt.xticks(y_pos, objects)
-plt.ylabel('Barcodes * 10^-10')
+plt.ylabel('Barcodes * 10^-12')
 plt.title('Barcodes on my Walmart Receipt')
  
 plt.savefig('testplot.png')
