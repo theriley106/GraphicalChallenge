@@ -1,4 +1,5 @@
 import glob
+import os
 
 def checkForScreenshot(fileName):
 	return os.path.isfile(fileName)

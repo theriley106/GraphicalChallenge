@@ -1,3 +1,4 @@
+import os
 import glob
 from flask import Flask, request, render_template, request, url_for, redirect, Markup, Response, send_file, send_from_directory, make_response, jsonify
 import csv
@@ -97,6 +98,11 @@ def Jan14():
 @app.route('/Jan15/', methods=['GET'])
 def Jan15():
 	import Jan15
+	if xUtilities.checkForScreenshot("Screenshots/{}.png".format(sys._getframe().f_code.co_name)) == False:
+		print "Screenshots/{}.png".format(sys._getframe().f_code.co_name)
+		os.system("touch Screenshots/{}.png".format(sys._getframe().f_code.co_name))
+		print("true")
+	#if 
 	DATABASE = Jan15.getDatabase()
 	return render_template("Jan15.html", WSB=DATABASE['WSB'], ALL=DATABASE['ALL'])
 #This is template for all sites
