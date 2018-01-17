@@ -6,7 +6,7 @@ listOfWords = open(file).read().split("\n")
 
 if raw_input("Select Score (Y/N): ").lower() == 'y':
 	query = '''SELECT
-	  body, created_utc
+	  body, created_utc, score
 
 	FROM [fh-bigquery:reddit_comments.all
 
