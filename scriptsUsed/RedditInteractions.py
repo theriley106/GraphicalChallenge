@@ -1,3 +1,8 @@
+import sys
+# sys.setdefaultencoding() does not exist, here!
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('UTF8')
+from textblob import TextBlob
 import json
 import glob
 import re
@@ -18,7 +23,7 @@ def ldJsonToList(jsonFile):
 def convertWordList(wordListFile):
 	listOfWords = open(wordListFile).read().split("\n")
 	for word in listOfWords:
-		TEMPDATA[word] = 0
+		TEMPDATA[word] = {"Count": 0, "Sentiments": []}
 		DATABASE.append({"Word": word, "Occurances": 0, "Sentiment": 0})
 	return listOfWords
 
@@ -29,7 +34,17 @@ if __name__ == '__main__':
 	listOfComments = ldJsonToList(raw_input("JSON Containing Comment Data Filename: "))
 	print("Analyzing {} words and {} comments".format(len(listOfWords), len(listOfComments)))
 	if raw_input("Return Comment Sentiment? (y/n) ").lower() == "y":
-		getSentiment = True
+		for i, var in enumerate(listOfComments):
+			try:
+				if i % 1000 == 0:
+					print("{} Sentiment".format(i))
+				for word in listOfWords:
+					for keyword in str(word).split("/"):
+						if str(keyword).strip().lower() in str(var).lower():
+							TEMPDATA[word]["Sentiments"].append(TextBlob(var["body"]).sentiment.polarity)
+			except Exception as exp:
+				print exp
+
 	else:
 		getSentiment = False
 	if raw_input("Verbose (y/n): ") == 'y':
@@ -37,15 +52,21 @@ if __name__ == '__main__':
 	else:
 		verbose = False
 	saveFileName = raw_input("Save Filename: ")
-	if getSentiment == False:
-		for word in listOfWords:
-			if verbose == True:
-				print("Finding {}".format(word))
-			TEMPDATA[word] = len(re.findall(word.lower(), str(listOfComments).lower()))
-		for key, value in TEMPDATA.items():
-			for data in DATABASE:
-				if data['Word'] == key:
-					data['Occurances'] = value
+	for word in listOfWords:
+		wordCount = 0
+		if verbose == True:
+			print("Finding {}".format(word))
+		for keyword in str(word).split("/"):
+			wordCount = wordCount + len(re.findall(str(keyword).lower().strip(), str(listOfComments).lower()))
+		TEMPDATA[word]["Count"] = wordCount
+	for key, value in TEMPDATA.items():
+		for data in DATABASE:
+			if data['Word'] == key:
+				data['Occurances'] = value['Count']
+				if len(value['Sentiments']) > 0:
+					data['Sentiment'] = sum(value['Sentiments']) / float(len(value['Sentiments']))
+				else:
+					data['Sentiment'] = 0
 
 	with open(saveFileName, 'w') as outfile:
 		json.dump(DATABASE, outfile)

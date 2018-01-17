@@ -144,6 +144,16 @@ def Jan16():
 		return "Getting Screenshot"
 	return render_template("Jan16.html")
 
+@app.route('/Jan17/', methods=['GET'])
+def Jan17():
+	import Jan17
+	DATABASE=Jan17.getDatabase()
+	for data in DATABASE:
+		if data['Nootropics']["Sentiment"] == 0 or data['StackAdvice']["Sentiment"] == 0:
+			DATABASE.remove(data)
+	DATABASE = sorted(DATABASE, key=lambda k: k['Nootropics']['Occurances'])
+	return render_template("Jan17.html", DATABASE=DATABASE[::-1][:15])
+
 @app.route('/', methods=['GET'])
 def index():
 	return render_template("index.html")

@@ -8,8 +8,23 @@ from datetime import datetime
 import operator
 import glob
 import json
+
 DATES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+DATABASE = []
+
+N_DATASET = json.load(open(glob.glob('static/Jan17/Nootropics_Jan17.json')[0], 'rb'))
+SA_DATASET = json.load(open(glob.glob('static/Jan17/StackAdvice_Jan17.json')[0], 'rb'))
+
+
+for N_Value in N_DATASET:
+	for SA_Value in SA_DATASET:
+		if N_Value["Word"] == SA_Value["Word"]:
+			tempData = {}
+			tempData['Name'] = N_Value["Word"].split('/')[0].strip()
+			tempData['Nootropics'] = N_Value
+			tempData['StackAdvice'] = SA_Value
+			DATABASE.append(tempData)
 '''listDictionaries = []
 #DATES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 #YearlySentiment = [{'Y': 0.09034703986216593, 'X': '2015'}, {'Y': 0.0977252561320153, 'X': '2014'}, {'Y': 0.09023169494940395, 'X': '2017'}, {'Y': 0.08492654004088508, 'X': '2016'}, {'Y': 0.08780669719691525, 'X': '2011'}, {'Y': 0.18463455149501662, 'X': '2010'}, {'Y': 0.09018244279449084, 'X': '2013'}, {'Y': 0.06930046609477233, 'X': '2012'}]
@@ -28,6 +43,9 @@ def returnTime(timestamp):
 		int(timestamp)
 	).strftime('%m-%Y')
 	)
+
+def getDatabase():
+	return DATABASE
 
 '''
 with open(glob.glob('static/Jan15/martinWSB.json')[0], 'rb') as f:
@@ -54,8 +72,8 @@ with open(glob.glob('static/Jan15/martinAll.json')[0], 'rb') as f:
 #	DATA.append({"Day": e, "Score": sum(DATABASE[e]) / float(len(DATABASE[e]))})
 
 #print DATA
-WSB = json.load(open(glob.glob('static/Jan15/WSB.json')[0], 'rb'))
-ALL = json.load(open(glob.glob('static/Jan15/ALL.json')[0], 'rb'))
+
+'''ALL = json.load(open(glob.glob('static/Jan15/ALL.json')[0], 'rb'))
 
 
 newDataWSB = sorted(WSB, key=lambda day: datetime.strptime(day['Day'], "%m-%Y"))
@@ -69,7 +87,7 @@ def getDatabase():
 	DATABASE = {}
 	DATABASE['WSB'] = newDataWSB
 	DATABASE['ALL'] = newDataALL
-	return DATABASE
+	return DATABASE'''
 
 '''WSB = []
 ALL = []
@@ -85,4 +103,4 @@ with open('ALL.json', 'w') as fout:
 	json.dump(ALL, fout)'''
 
 if __name__ == '__main__':
-	main()
+	print DATABASE
