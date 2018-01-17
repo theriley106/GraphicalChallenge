@@ -1,5 +1,6 @@
 import os
 import glob
+import random
 from flask import Flask, request, render_template, request, url_for, redirect, Markup, Response, send_file, send_from_directory, make_response, jsonify
 import csv
 import sqlite3 as lite
@@ -153,6 +154,39 @@ def Jan17():
 			DATABASE.remove(data)
 	DATABASE = sorted(DATABASE, key=lambda k: k['Nootropics']['Occurances'])
 	return render_template("Jan17.html", DATABASE=DATABASE[::-1][:15])
+
+@app.route('/Jan18/', methods=['GET'])
+def Jan18():
+	import Jan17
+	DATABASE=Jan17.getDatabase()
+	for data in DATABASE:
+		if data['Nootropics']["Sentiment"] == 0 or data['StackAdvice']["Sentiment"] == 0:
+			DATABASE.remove(data)
+	DATABASE = sorted(DATABASE, key=lambda k: k['Nootropics']['Occurances'])
+	return render_template("Jan18.html", DATABASE=DATABASE[::-1][:10])
+
+@app.route('/Jan19/', methods=['GET'])
+def Jan19():
+	import Jan17
+	DATABASE=Jan17.getDatabase()
+	for data in DATABASE:
+		if data['Nootropics']["Sentiment"] == 0 or data['StackAdvice']["Sentiment"] == 0:
+			DATABASE.remove(data)
+	DATABASE = sorted(DATABASE, key=lambda k: k['StackAdvice']['Occurances'])
+	return render_template("Jan19.html", DATABASE=DATABASE[::-1][:10])
+
+@app.route('/Jan20/', methods=['GET'])
+def Jan20():
+	import Jan17
+	DATABASE=Jan17.getDatabase()
+	for data in DATABASE:
+		if data['Nootropics']["Sentiment"] == 0 or data['StackAdvice']["Sentiment"] == 0:
+			DATABASE.remove(data)
+	for data in DATABASE:
+		data['TotalOccurances'] = data['StackAdvice']['Occurances'] + data['Nootropics']['Occurances']
+		data['ColorVal'] = {"Name": xUtilities.random_char(5), "Color": xUtilities.genColor()}
+	DATABASE = sorted(DATABASE, key=lambda k: k['TotalOccurances'])
+	return render_template("Jan20.html", DATABASE=DATABASE[::-1][:30])
 
 @app.route('/', methods=['GET'])
 def index():
