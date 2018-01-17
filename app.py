@@ -204,6 +204,30 @@ def Jan20():
 		return "Getting Screenshot"
 	return render_template("Jan20.html", DATABASE=DATABASE[::-1][:30])
 
+@app.route('/Jan21/', methods=['GET'])
+def Jan21():
+	import Jan17
+	DATABASE=Jan17.getDatabase()
+	for data in DATABASE:
+		if data['Nootropics']["Sentiment"] == 0 or data['StackAdvice']["Sentiment"] == 0:
+			DATABASE.remove(data)
+	for data in DATABASE:
+		data['TotalOccurances'] = data['StackAdvice']['Occurances'] + data['Nootropics']['Occurances']
+		data['ColorVal'] = {"Name": xUtilities.random_char(5), "Color": xUtilities.genColor()}
+	for data in DATABASE:
+		data['totalSentiment'] = float(data['Nootropics']['Sentiment'] + data['StackAdvice']['Sentiment']) / 2
+		#data['totalSentiment'] = ((data['Nootropics']['Sentiment'] * data['Nootropics']['Occurances']) + (data['StackAdvice']['Sentiment'] * data['StackAdvice']['Occurances'])) / data['TotalOccurances']
+	for data in DATABASE:
+		print data['totalSentiment']
+		data['Nootropics']['Sentiment'] = round(data['Nootropics']['Sentiment'], 4)
+		data['StackAdvice']['Sentiment'] = round(data['StackAdvice']['Sentiment'], 4)
+	DATABASE = sorted(DATABASE, key=lambda k: k['totalSentiment'])
+	date = sys._getframe().f_code.co_name
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
+	return render_template("Jan21.html", DATABASE=DATABASE[::-1])
+
 @app.route('/', methods=['GET'])
 def index():
 	return render_template("index.html")

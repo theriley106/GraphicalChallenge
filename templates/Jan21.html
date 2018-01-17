@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Nootropic Discussion by Supplement</title>
+  <title>Subreddit Sentiment by Nootropic</title>
   
   
   
@@ -193,14 +193,14 @@ button, select, input {
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <div class="quiz-window">
   <div class="quiz-window-header">
-    <div class="quiz-window-title">Nootropic Discussion by Supplement</div>
+    <div class="quiz-window-title">Subreddit Sentiment Towards Nootropic</div>
     <button class="quiz-window-close">&times;</button>
   </div>
   <div class="quiz-window-body">
     <div class="gui-window-awards">
       <ul class="guiz-awards-row guiz-awards-header">
         <li class="guiz-awards-header-star">&nbsp;</li>
-        <li class="guiz-awards-header-title">Suppliment</li>
+        <li class="guiz-awards-header-title">Nootropic</li>
         <li class="guiz-awards-header-track">/r/StackAdvice</li>
         <li class="guiz-awards-header-time">/r/Nootropics</li>
       </ul>
@@ -212,8 +212,8 @@ button, select, input {
         <li class="guiz-awards-title">{{ data.Name }}
           <div class="guiz-awards-subtitle">{{ data.TotalOccurances }} Total Mentions</div>
         </li>
-        <li class="guiz-awards-track">{{ data.StackAdvice.Occurances }}</li>
-        <li class="guiz-awards-time">{{ data.Nootropics.Occurances }}</li>
+        <li class="guiz-awards-track">{{ data.StackAdvice.Sentiment }}</li>
+        <li class="guiz-awards-time">{{ data.Nootropics.Sentiment }}</li>
       </ul>
 
 {% endfor %}
