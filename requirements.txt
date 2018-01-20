@@ -1,0 +1,8 @@
+gunicorn==19.7.1
+SQLAlchemy==1.1.9
+SQLAlchemy-Utils==0.32.11
+psycopg2==2.7.1
+beautifulsoup4==4.5.1
+requests==2.12.3
+Flask==0.12.1
+matplotlib==1.5.1
