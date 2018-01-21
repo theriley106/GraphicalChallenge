@@ -29,3 +29,5 @@
 - [Ramen Noodle Ratings by Country](http://graphical-challenge.herokuapp.com/Jan11/)
 - [Drug Popularity on /r/DarkNetMarkets](http://graphical-challenge.herokuapp.com/Jan13/)
 - [/r/Cryptocurrency Post Scores by Weekday](http://graphical-challenge.herokuapp.com/Jan14/)
+- [/r/WallStreetBets vs /r/All sentiment towards Martin Shkreli](http://graphical-challenge.herokuapp.com/Jan15/)
+- [Barcodes on my Walmart Receipt... *Second MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan16/)
