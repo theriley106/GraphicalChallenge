@@ -2,6 +2,10 @@
 ## Creating 365 Data Visualizations for the 365 Days in 2018
 ## [Click here to view the Heroku App hosting the Visualizations](https://graphical-challenge.herokuapp.com)
 
+## External Mentions
+
+- [/r/Nootropics - January 17th - ~4,500 Views](https://www.reddit.com/r/Nootropics/comments/7r558j/i_did_some_text_analysis_on_rnootropics_here_are/)
+
 ## Visualization History
 
 ### January
