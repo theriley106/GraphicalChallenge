@@ -25,3 +25,5 @@
 - [Alexa Skill Reviews by Star *First MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan7/)
 - [Alexa Skill Categories by Percentage](http://graphical-challenge.herokuapp.com/Jan8/)
 - [Comments Containing Stock Tickers vs. Dow Jones Industrial Average](http://graphical-challenge.herokuapp.com/Jan9/)
+- [Occurances of the word "Yolo" on Reddit](http://graphical-challenge.herokuapp.com/Jan10/)
+- [Ramen Noodle Ratings by Country](http://graphical-challenge.herokuapp.com/Jan11/)
