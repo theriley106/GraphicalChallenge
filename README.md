@@ -31,3 +31,4 @@
 - [/r/Cryptocurrency Post Scores by Weekday](http://graphical-challenge.herokuapp.com/Jan14/)
 - [/r/WallStreetBets vs /r/All sentiment towards Martin Shkreli](http://graphical-challenge.herokuapp.com/Jan15/)
 - [Barcodes on my Walmart Receipt... *Second MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan16/)
+- [Reddit's Sentiment towards most discussed Nootropics](http://graphical-challenge.herokuapp.com/Jan17/)
