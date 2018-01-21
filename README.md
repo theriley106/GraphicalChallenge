@@ -28,6 +28,7 @@
 - [Alexa Skill Categories by Percentage](http://graphical-challenge.herokuapp.com/Jan8/)
 - [Comments Containing Stock Tickers vs. Dow Jones Industrial Average](http://graphical-challenge.herokuapp.com/Jan9/)
 - [Top 10 Supplements on /r/Nootropics by Comment Frequency](http://graphical-challenge.herokuapp.com/Jan18/)
+- [/r/AskReddit Sentiment towards Bitcoin by Month](https://graphical-challenge.herokuapp.com/Jan12/)
 - [Top 10 Supplements on /r/StackAdvice by Comment Frequency](http://graphical-challenge.herokuapp.com/Jan19/)
 - [Occurances of the word "Yolo" on Reddit](http://graphical-challenge.herokuapp.com/Jan10/)
 - [Ramen Noodle Ratings by Country](http://graphical-challenge.herokuapp.com/Jan11/)
