@@ -6,8 +6,15 @@
 
 ### External Site Mentions
 
+- [/r/WallStreetBets - January 10th - ~9,200 Views](https://www.reddit.com/r/wallstreetbets/comments/7pgyuj/pornhub_comments_containing_valid_stock_tickers/)
+
 - [/r/Nootropics - January 17th - ~4,500 Views](https://www.reddit.com/r/Nootropics/comments/7r558j/i_did_some_text_analysis_on_rnootropics_here_are/)
 
+- [/r/DataIsBeautiful - January 14th - ~4,000 Views](https://www.reddit.com/r/dataisbeautiful/comments/7q8gif/oc_drug_popularity_on_rdarknetmarkets/)
+
+- [/r/DataIsBeautiful - January 11th - ~1,000 Views](https://www.reddit.com/r/dataisbeautiful/comments/7prj3k/oc_average_ramen_noodle_rating_by_country_based/)
+
+- [/r/Bitcoin - January 12th - ~150 Views](https://www.reddit.com/r/Bitcoin/comments/7pxwlf/raskreddit_sentiment_towards_bitcoin_graphed/)
 
 ### January
 
