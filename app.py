@@ -9,7 +9,7 @@ import threading
 import sys
 import xUtilities
 sys.path.insert(0, 'pythonFiles/')
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="", static_folder="static")
 
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
