@@ -7,3 +7,4 @@ requests==2.12.3
 Flask==0.12.1
 matplotlib==1.5.1
 selenium==2.53.6
+BeautifulSoup==3.2.1
