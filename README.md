@@ -21,3 +21,7 @@
 - [Visualizing Clemson University Bus Routes using MapBox](https://graphical-challenge.herokuapp.com/Jan1)
 - [Finding the Frequency of the word "Tesla" on /r/WallStreetBets](https://graphical-challenge.herokuapp.com/Jan2/)
 - [Visualizing my Internship Applications](https://graphical-challenge.herokuapp.com/Jan4/)
+- [Sphinx Gas Price Discrepancies](http://graphical-challenge.herokuapp.com/Jan6/)
+- [Alexa Skill Reviews by Star *First MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan7/)
+- [Alexa Skill Categories by Percentage](http://graphical-challenge.herokuapp.com/Jan8/)
+- [Comments Containing Stock Tickers vs. Dow Jones Industrial Average](http://graphical-challenge.herokuapp.com/Jan9/)
