@@ -14,6 +14,8 @@
 
 - [/r/DataIsBeautiful - January 11th - ~1,000 Views](https://www.reddit.com/r/dataisbeautiful/comments/7prj3k/oc_average_ramen_noodle_rating_by_country_based/)
 
+- [/r/ACT - January 23 - ~230 Views](https://www.reddit.com/r/ACT/comments/7sbphp/ract_user_flairs_vs_general_population_composite/)
+
 - [/r/Bitcoin - January 12th - ~150 Views](https://www.reddit.com/r/Bitcoin/comments/7pxwlf/raskreddit_sentiment_towards_bitcoin_graphed/)
 
 ### January
