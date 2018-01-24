@@ -240,6 +240,18 @@ def Jan22():
 		return "Getting Screenshot"
 	return render_template("Jan22.html", DATABASE=DATABASE[10:])
 
+@app.route('/Jan23/', methods=['GET'])
+def Jan23():
+	import Jan23
+	DATABASE=Jan23.getDatabase()
+	DATABASE = sorted(DATABASE, key=lambda k: int(k['Score']))
+	date = sys._getframe().f_code.co_name
+	#print (float(listOf99) / float(2143)) * 100
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
+	return render_template("Jan23.html", DATABASE=DATABASE[10:])
+
 @app.route('/', methods=['GET'])
 def index():
 	return render_template("index.html")
