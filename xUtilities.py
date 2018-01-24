@@ -4,6 +4,9 @@ import os
 import string
 import time
 from selenium import webdriver
+import bs4
+import requests
+
 def checkForScreenshot(date):
 	fileName = "Screenshots/{}.png".format(date)
 	return os.path.isfile(fileName)
@@ -23,3 +26,10 @@ def genColor():
 
 def random_char(y):
 	return ''.join(random.choice(string.ascii_letters) for x in range(y))
+
+def grabViewCount(redditURL):
+	userName = os.environ['REDDIT_USERNAME']
+	passWord = os.environ['REDDIT_PASSWORD']
+
+	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+	return requests.get(redditURL, headers=headers)
