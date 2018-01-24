@@ -18,6 +18,10 @@
 
 - [/r/Bitcoin - January 12th - ~150 Views](https://www.reddit.com/r/Bitcoin/comments/7pxwlf/raskreddit_sentiment_towards_bitcoin_graphed/)
 
+- [/r/SAT - January 23rd - ~450 Views](https://www.reddit.com/r/Sat/comments/7sjbil/rsat_user_flairs_by_score_data_visualization/)
+
+- [/r/ACT - January 22nd - ~350 Views](https://www.reddit.com/r/ACT/comments/7sbphp/ract_user_flairs_vs_general_population_composite/)
+
 ### January
 
 - [Visualizing Clemson University Bus Routes using MapBox](https://graphical-challenge.herokuapp.com/Jan1)
