@@ -2,39 +2,27 @@ import glob
 import csv
 import json
 from uszipcode import ZipcodeSearchEngine
-search = ZipcodeSearchEngine()
-
+#search = ZipcodeSearchEngine()
+primaryDataset = json.load(open(glob.glob('static/Jan24.json')[0], 'rb'))
 def returnLongLatFromZIP(zipCode):
-	a = search.by_zipcode(str(zipCode))[0]
+	a = search.by_zipcode(str(zipCode))
+	print a["Latitude"]
 	return {"Longitude": a["Longitude"], "Latitude": a["Latitude"]}
 
-
+'''
 primaryDataset = json.load(open(glob.glob('static/Jan24.json')[0], 'rb'))
 for val in primaryDataset:
-	longitude, latitude = returnLongLatFromZIP(val['zip'])
-	val["Longitude"] = longitude
-	val["Latitude"] = latitude
+	try:
+		data = returnLongLatFromZIP(val['zip'])
+		if data["Longitude"] != None:
+			val["Longitude"] = data["Longitude"]
+			val["Latitude"] = data["Latitude"]
+			DB.append(val)
+	except:
+		pass
+'''
 
-with open('satScoreIndi.json', 'w') as fp:
-    json.dump(primaryDataset, fp)
 
-def readCSVs():
-	DATABASE = []
-	for csvFile in returnAllCSV(BUSNUM):
-		with open(csvFile, 'rb') as f:
-			reader = csv.reader(f)
-			your_list = list(reader)
-			for your_listz in your_list:
-				try:
-					DATABASE.append({"Lat": your_listz[2], "Long": your_listz[1]})
-				except Exception as exp:
-					print exp
-					pass
-	return DATABASE
 
 def genDatabase():
-	DATABASE = readCSVs()
-	DATABASE = [dict(t) for t in set([tuple(d.items()) for d in DATABASE])]
-	DATABASE = DATABASE[:500]
-	return DATABASE
-
+	return primaryDataset

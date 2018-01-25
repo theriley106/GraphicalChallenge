@@ -90,5 +90,4 @@ def grabViewCount(redditURLList):
 		thread.join()
 	return info
 
-print grabViewCount(extractRedditLinksFromFile())
 #print extractRedditLinksFromFile()

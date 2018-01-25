@@ -252,6 +252,12 @@ def Jan23():
 		return "Getting Screenshot"
 	return render_template("Jan23.html", DATABASE=DATABASE[10:])
 
+@app.route('/Jan24/', methods=['GET'])
+def Jan24():
+	import Jan24
+	DATABASE=Jan24.getDatabase()
+	return render_template("Jan24.html", DATABASE=DATABASE)
+
 @app.route('/', methods=['GET'])
 def index():
 	return render_template("index.html")
