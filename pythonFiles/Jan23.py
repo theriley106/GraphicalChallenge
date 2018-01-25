@@ -14,7 +14,7 @@ redditData = json.load(open(glob.glob('static/Jan23/SATData.json')[0], 'rb'))
 #rangeData = json.load(open(glob.glob('static/Jan23/SAT_SCORE_RANGE_SCORES.json')[0], 'rb'))
 toSum = []
 TOTAL_COMMENTS = len(redditData)
-
+allScores = []
 a = 0
 for key, val in redditData.items():
 	a += val
@@ -23,6 +23,9 @@ redditData["Total"] = a
 for key, val in redditData.items():
 	if key != "Total" and int(key) < 1601:
 		DATABASE.append({"redditData": (float(val) / redditData['Total']) * 100, "Score": key})
+		allScores += [int(key)] * val
+
+print float(sum(allScores)) / float(len(allScores))
 '''for key, val in redditData.items():
 	for value in rangeData:
 		if key in tuple(value["Score"].split("-")):
@@ -83,4 +86,5 @@ def getDatabase():
 
 
 if __name__ == '__main__':
-	print DATABASE
+	pass
+	#print DATABASE
