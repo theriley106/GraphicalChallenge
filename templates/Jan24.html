@@ -27,7 +27,7 @@ width:auto !important;
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoidGhlcmlsZXkxMDYiLCJhIjoiY2o4cm1xZzdnMTgzMDMzbnR1d3Q2Y2p6byJ9.C-Kuwbt67fBaEg0V5rGXzg';
-var map = L.mapbox.map('map', 'mapbox.streets').setView([40.0902, -95.7129], 3.5);
+var map = L.mapbox.map('map', 'mapbox.streets').setView([40.0902, -95.7129], 4.5);
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -38,7 +38,7 @@ var geoJson = [
 
 {
     type: "Feature",
-    "geometry": { "type": "Point", "coordinates": [{{ info.Latitude }}, {{ info.Longitude }}]},
+    "geometry": { "type": "Point", "coordinates": [{{ info.Longitude }}, {{ info.Latitude }}]},
     "properties": {
         "marker-color": "#ff8888",
     }
@@ -53,6 +53,10 @@ myLayer.on('layeradd', function(e) {
     var marker = e.layer,
         feature = marker.feature;
 
+    var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+                            '<img src="' + feature.properties.image + '" />' +
+                            feature.properties.city +
+                        '</a>';
 
     // http://leafletjs.com/reference.html#popup
     marker.bindPopup(popupContent,{

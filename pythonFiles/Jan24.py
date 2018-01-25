@@ -24,5 +24,5 @@ for val in primaryDataset:
 
 
 
-def genDatabase():
+def getDatabase():
 	return primaryDataset
