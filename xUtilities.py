@@ -18,7 +18,7 @@ def returnLongLatFromCity(value):
 	return a
 
 def returnLongLatFromZIP(zipCode):
-	a = search.by_zip(str(zipCode))[0]
+	a = search.by_zipcode(str(zipCode))[0]
 	return {"Longitude": a["Longitude"], "Latitude": a["Latitude"]}
 
 def chunks(l, n):

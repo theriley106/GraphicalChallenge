@@ -1,11 +1,22 @@
 import glob
 import csv
 import json
+from uszipcode import ZipcodeSearchEngine
+search = ZipcodeSearchEngine()
+
+def returnLongLatFromZIP(zipCode):
+	a = search.by_zipcode(str(zipCode))[0]
+	return {"Longitude": a["Longitude"], "Latitude": a["Latitude"]}
+
 
 primaryDataset = json.load(open(glob.glob('static/Jan24.json')[0], 'rb'))
+for val in primaryDataset:
+	longitude, latitude = returnLongLatFromZIP(val['zip'])
+	val["Longitude"] = longitude
+	val["Latitude"] = latitude
 
-def returnAllCSV(busNum):
-	return glob.glob('static/Jan1.csv')
+with open('satScoreIndi.json', 'w') as fp:
+    json.dump(primaryDataset, fp)
 
 def readCSVs():
 	DATABASE = []
