@@ -9,7 +9,17 @@ from selenium import webdriver
 import bs4
 import requests
 import threading
-DB = {}
+from uszipcode import ZipcodeSearchEngine
+search = ZipcodeSearchEngine()
+
+def returnLongLatFromCity(value):
+	city, state = value.split(', ')
+	a = search.by_city_and_state(city=city, state=state)[0]
+	return a
+
+def returnLongLatFromZIP(zipCode):
+	a = search.by_zip(str(zipCode))[0]
+	return {"Longitude": a["Longitude"], "Latitude": a["Latitude"]}
 
 def chunks(l, n):
     """Yield successive n-sized chunks from l."""
