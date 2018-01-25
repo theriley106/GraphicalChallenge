@@ -1,4 +1,5 @@
 import re
+import threading
 import random
 import glob
 import os
@@ -9,6 +10,11 @@ import bs4
 import requests
 import threading
 DB = {}
+
+def chunks(l, n):
+    """Yield successive n-sized chunks from l."""
+    for i in xrange(0, len(l), n):
+        yield l[i:i + n]
 
 def checkForScreenshot(date):
 	fileName = "Screenshots/{}.png".format(date)
@@ -51,14 +57,28 @@ def extractRedditLinksFromFile(file="README.md"):
 			links.append(link)
 	return links
 
-def grabViewCount(redditURL):
-	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
-	a = redditLogin(headers)
-	res = a.get(redditURL, headers=headers)
-	page = bs4.BeautifulSoup(res.text, 'lxml')
-	e = page.select(".view-count")
-	print(e[0].getText())
-	return requests.get(redditURL, headers=headers)
 
-#grabViewCount("https://www.reddit.com/r/wallstreetbets/comments/7pgyuj/pornhub_comments_containing_valid_stock_tickers/")
-print extractRedditLinksFromFile()
+def grabViewCount(redditURLList):
+	info = []
+	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+	listOfLinks = chunks(redditURLList, len(redditURLList) / 5)
+	def extractView(redditURL):
+		for url in redditURL:
+			res = a.get(url, headers=headers)
+			page = bs4.BeautifulSoup(res.text, 'lxml')
+			e = page.select(".view-count")
+			val = e[0].getText()
+			if 'k' in str(val).lower():
+				val = int(float(re.findall("([+-]?\d+\.\d+)", str(val))[0]) * 1000)
+			info.append({"URL": url, "ViewCount": val})
+	
+	a = redditLogin(headers)
+	threads = [threading.Thread(target=extractView, args=(url,)) for url in listOfLinks]
+	for thread in threads:
+		thread.start()
+	for thread in threads:
+		thread.join()
+	return info
+
+print grabViewCount(extractRedditLinksFromFile())
+#print extractRedditLinksFromFile()
