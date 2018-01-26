@@ -259,8 +259,19 @@ def Jan23():
 @app.route('/Jan24/', methods=['GET'])
 def Jan24():
 	import Jan24
+	date = sys._getframe().f_code.co_name
+	#print (float(listOf99) / float(2143)) * 100
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	DATABASE=Jan24.getDatabase()
 	return render_template("Jan24.html", DATABASE=DATABASE)
+
+@app.route('/Jan25/', methods=['GET'])
+def Jan25():
+	import Jan25
+	DATABASE=Jan25.getDatabase()
+	return render_template("Jan25.html", DATABASE=DATABASE)
 
 if __name__ == "__main__":
 	app.run()
