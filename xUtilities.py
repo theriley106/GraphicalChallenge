@@ -9,8 +9,8 @@ from selenium import webdriver
 import bs4
 import requests
 import threading
-#from uszipcode import ZipcodeSearchEngine
-#search = ZipcodeSearchEngine()
+from uszipcode import ZipcodeSearchEngine
+search = ZipcodeSearchEngine()
 
 def returnLongLatFromCity(value):
 	city, state = value.split(', ')
@@ -89,3 +89,4 @@ def grabViewCount(redditURLList):
 	for thread in threads:
 		thread.join()
 	return info
+
