@@ -49,21 +49,7 @@ var geoJson = [
 ];
 
 // Add custom popups to each using our custom feature properties
-myLayer.on('layeradd', function(e) {
-    var marker = e.layer,
-        feature = marker.feature;
 
-    var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
-                            '<img src="' + feature.properties.image + '" />' +
-                            feature.properties.city +
-                        '</a>';
-
-    // http://leafletjs.com/reference.html#popup
-    marker.bindPopup(popupContent,{
-        closeButton: false,
-        minWidth: 320
-    });
-});
 
 // Add features to the map
 myLayer.setGeoJSON(geoJson);
