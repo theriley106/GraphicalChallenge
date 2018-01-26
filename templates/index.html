@@ -1,21 +1,3 @@
-<h1><a href='Jan1'>January 1</a></h1>
-<h1><a href='Jan2'>January 2</a></h1>
-<h1><a href='Jan3'>January 3</a></h1>
-<h1><a href='Jan4'>January 4</a></h1>
-<h1><a href='Jan5'>January 5</a></h1>
-<h1><a href='Jan6'>January 6</a></h1>
-<h1><a href='Jan7'>January 7</a></h1>
-<h1><a href='Jan8'>January 8</a></h1>
-<h1><a href='Jan9'>January 9</a></h1>
-<h1><a href='Jan10'>January 10</a></h1>
-<h1><a href='Jan11'>January 11</a></h1>
-<h1><a href='Jan12'>January 12</a></h1>
-<h1><a href='Jan13'>January 13</a></h1>
-<h1><a href='Jan14'>January 14</a></h1>
-<h1><a href='Jan15'>January 15</a></h1>
-<h1><a href='Jan16'>January 16</a></h1>
-<h1><a href='Jan17'>January 17</a></h1>
-<h1><a href='Jan18'>January 18</a></h1>
-<h1><a href='Jan19'>January 19</a></h1>
-<h1><a href='Jan20'>January 20</a></h1>
-<h1><a href='Jan21'>January 21</a></h1>
+{% for info in DATABASE %}
+<h1><a href='{{ info.Abbrev }}{{ info.Day }}'>{{ info.Month }} {{ info.Day }}</a></h1>
+{% endfor %}

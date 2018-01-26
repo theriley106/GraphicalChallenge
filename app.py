@@ -11,6 +11,10 @@ import xUtilities
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
+@app.route('/', methods=['GET'])
+def index():
+	return render_template("index.html", DATABASE=xUtilities.genMakeIndex())
+
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
 	import Jan1
@@ -257,10 +261,6 @@ def Jan24():
 	import Jan24
 	DATABASE=Jan24.getDatabase()
 	return render_template("Jan24.html", DATABASE=DATABASE)
-
-@app.route('/', methods=['GET'])
-def index():
-	return render_template("index.html")
 
 if __name__ == "__main__":
 	app.run()

@@ -12,6 +12,25 @@ import threading
 from uszipcode import ZipcodeSearchEngine
 search = ZipcodeSearchEngine()
 
+def monthToMonth(shortMonth):
+	try:
+		return {
+		'Jan' : "January",
+		'Feb' : "February",
+		'Mar' : "March",
+		'Apr' : "April",
+		'May' : "May",
+		'Jun' : "June",
+		'Jul' : "July",
+		'Aug' : "August",
+		'Sep' : "September", 
+		'Oct' : "October",
+		'Nov' : "November",
+		'Dec' : "December"
+		}[shortMonth]
+	except:
+		return None
+
 def returnLongLatFromCity(value):
 	city, state = value.split(', ')
 	a = search.by_city_and_state(city=city, state=state)[0]
@@ -22,9 +41,9 @@ def returnLongLatFromZIP(zipCode):
 	return {"Longitude": a["Longitude"], "Latitude": a["Latitude"]}
 
 def chunks(l, n):
-    """Yield successive n-sized chunks from l."""
-    for i in xrange(0, len(l), n):
-        yield l[i:i + n]
+	"""Yield successive n-sized chunks from l."""
+	for i in xrange(0, len(l), n):
+		yield l[i:i + n]
 
 def checkForScreenshot(date):
 	fileName = "Screenshots/{}.png".format(date)
@@ -90,3 +109,13 @@ def grabViewCount(redditURLList):
 		thread.join()
 	return info
 
+def genMakeIndex():
+	DB = []
+	for var in glob.glob('templates/*.html'):
+		monthChoice = monthToMonth(re.findall('\D+', str(str(var).partition("/")[2]))[0])
+		if monthChoice != None:
+			DB.append({"Abbrev": re.findall('\D+', str(str(var).partition("/")[2]))[0], "Month": monthChoice, "Day": re.findall('\d+', str(str(var).partition("/")[2]))[0]})
+	return sorted(DB, key=lambda k: int(k['Day']))
+
+if __name__ == '__main__':
+	pass
