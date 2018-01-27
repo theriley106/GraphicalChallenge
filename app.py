@@ -269,8 +269,10 @@ def Jan24():
 
 @app.route('/Jan25/', methods=['GET'])
 def Jan25():
-	import Jan25
-	DATABASE=Jan25.getDatabase()
+	import Jan24
+	DATABASE=Jan24.getDatabase()
+	#import Jan25
+	#DATABASE=Jan25.getDatabase()
 	return render_template("Jan25.html", DATABASE=DATABASE)
 
 if __name__ == "__main__":

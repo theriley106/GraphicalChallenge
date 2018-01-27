@@ -6,8 +6,6 @@
 
 ### External Site Mentions
 
-- [/r/WallStreetBets - January 10th - ~9,200 Views](https://www.reddit.com/r/wallstreetbets/comments/7pgyuj/pornhub_comments_containing_valid_stock_tickers/)
-
 - [/r/Nootropics - January 17th - ~4,500 Views](https://www.reddit.com/r/Nootropics/comments/7r558j/i_did_some_text_analysis_on_rnootropics_here_are/)
 
 - [/r/DataIsBeautiful - January 14th - ~4,000 Views](https://www.reddit.com/r/dataisbeautiful/comments/7q8gif/oc_drug_popularity_on_rdarknetmarkets/)
@@ -41,8 +39,6 @@
 - [Ramen Noodle Ratings by Country](http://graphical-challenge.herokuapp.com/Jan11/)
 - [Drug Popularity on /r/DarkNetMarkets](http://graphical-challenge.herokuapp.com/Jan13/)
 - [/r/Cryptocurrency Post Scores by Weekday](http://graphical-challenge.herokuapp.com/Jan14/)
-- [/r/WallStreetBets vs /r/All sentiment towards Martin Shkreli](http://graphical-challenge.herokuapp.com/Jan15/)
+- [/r/WallStreetBets vs /r/All sentiment Analysis Visualization](http://graphical-challenge.herokuapp.com/Jan15/)
 - [Barcodes on my Walmart Receipt... *Second MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan16/)
-- [Reddit's Sentiment towards most discussed Nootropics](http://graphical-challenge.herokuapp.com/Jan17/)
 - [Nootropic Discussion by Supplement](http://graphical-challenge.herokuapp.com/Jan20/)
-- [Nootropic Discussion by Sentiment](http://graphical-challenge.herokuapp.com/Jan21/)
