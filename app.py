@@ -136,7 +136,7 @@ def Jan15():
 	if xUtilities.checkForScreenshot(date) == False:
 		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
 		return "Getting Screenshot"
-	#if 
+	#if
 	DATABASE = Jan15.getDatabase()
 	return render_template("Jan15.html", WSB=DATABASE['WSB'], ALL=DATABASE['ALL'])
 #This is template for all sites
@@ -277,3 +277,4 @@ def Jan25():
 
 if __name__ == "__main__":
 	app.run()
+
