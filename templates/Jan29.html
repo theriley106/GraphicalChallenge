@@ -7,6 +7,15 @@
 
   <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Lato">
 
+<style>
+.verticaltext_content {
+  position: relative;
+  transform: rotate(-90deg);
+  right:90px;   //These three positions need adjusting
+  bottom:150px; //based on your actual chart size
+  width:200px;
+}
+</style>
 </head>
 
 <body translate="no"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 60%; width: 60%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
@@ -47,16 +56,26 @@ var densityData = {
 };
 
 var chartOptions = {
-  scales: {
-    yAxes: [{
-      barPercentage: 1
-    }]
-  },
-  elements: {
-    rectangle: {
-    }
+scales: {
+yAxes: [
+  {
+      id: 'y-axis-1',
+      display: true,
+      position: 'left',
+      ticks: {
+          callback: function(value, index, values) {
+              return value;
+          }
+      },
+      scaleLabel:{
+          display: true,
+          labelString: '# of upvotes',
+          fontColor: "#546372"
+      }
   }
-};
+]
+}
+ };
 
 var barChart = new Chart(densityCanvas, {
   type: 'bar',
