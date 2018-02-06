@@ -287,6 +287,11 @@ def Jan27():
 	#DATABASE=Jan25.getDatabase()
 	return render_template("Jan27.html", DATABASE=DATABASE)
 
+@app.route('/Jan29/', methods=['GET'])
+def Jan29():
+	import Jan29
+	DATABASE=Jan29.getDatabase()
+	return render_template("Jan29.html", DATABASE=DATABASE)
 
 if __name__ == "__main__":
 	app.run()

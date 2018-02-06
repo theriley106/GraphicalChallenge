@@ -25,8 +25,7 @@ def cleanData():
 		e = int(returnTime(commentData["created_utc"]))
 		DATABASE[e].append(int(commentData['score']))
 	for e in range(7):
-		DATA.append({"Day": e, "Score": sum(DATABASE[e]) / float(len(DATABASE[e]))})
-
+		DATA.append({"Day": days[e], "Score": sum(DATABASE[e]) / float(len(DATABASE[e]))})
 	return DATA
 
 def getDatabase():
