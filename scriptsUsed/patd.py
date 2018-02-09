@@ -33,23 +33,18 @@ def grabAllSongs(url):
 	res = grabSite(url)
 	page = bs4.BeautifulSoup(res.text, 'lxml')
 	for i, songTitle in enumerate(page.select("#listAlbum a")):
-		if i > 72:
-			try:
-				title = songTitle.getText()
-				url = genSongUrl(title)
-				if url != None:
-					lyrics = grabLyrics(url)
-					listOfSongs.append({"Title": title, "URL": url, "Lyrics": lyrics, "Sentiment": getLyricSentiment(lyrics)})
-			except:
-				print("Error on {}".format(i))
-			print("Done with {}".format(i))
+		try:
+			title = songTitle.getText()
+			url = genSongUrl(title)
+			if url != None:
+				lyrics = grabLyrics(url)
+				listOfSongs.append({"Title": title, "URL": url, "Lyrics": lyrics, "Sentiment": getLyricSentiment(lyrics)})
+		except:
+			print("Error on {}".format(i))
+		print("Done with {}".format(i))
 	return listOfSongs
 
 if __name__ == '__main__':
 	e = grabAllSongs("https://www.azlyrics.com/p/panicatthedisco.html")
 	with open('data.json', 'w') as outfile:
 		json.dump(e, outfile)
-	#res = grabSite()
-	#page = bs4.BeautifulSoup(res.text, 'lxml')
-
-
