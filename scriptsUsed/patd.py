@@ -14,6 +14,10 @@ def genSongUrl(songTitle, baseUrl='https://www.azlyrics.com/lyrics/panicatthedis
 	else:
 		return None
 
+def grabLyrics(url):
+	res = grabSite(url)
+	page = bs4.BeautifulSoup(res.text, 'lxml')
+
 def grabAllSongs(url):
 	listOfSongs = []
 	res = grabSite(url)
