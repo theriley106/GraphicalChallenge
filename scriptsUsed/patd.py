@@ -9,11 +9,13 @@ def grabSite(url):
 def grabAllSongs(url):
 	res = grabSite(url)
 	page = bs4.BeautifulSoup(res.text, 'lxml')
+	for songTitle in page.select("#listAlbum a"):
+		print songTitle
 
 
 if __name__ == '__main__':
 	grabAllSongs("https://www.azlyrics.com/p/panicatthedisco.html")
-	res = grabSite()
+	#res = grabSite()
 	page = bs4.BeautifulSoup(res.text, 'lxml')
 
 
