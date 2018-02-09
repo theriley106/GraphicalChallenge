@@ -2,6 +2,11 @@ import requests
 import bs4
 import re
 import json
+from textblob import TextBlob
+
+def getLyricSentiment(lyrics):
+	lyrics = re.sub('\s+',' ',lyrics)
+	return TextBlob(lyrics).sentiment.polarity
 
 def grabSite(url):
 	headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:32.0) Gecko/20100101 Firefox/32.0',}
@@ -33,7 +38,8 @@ def grabAllSongs(url):
 				title = songTitle.getText()
 				url = genSongUrl(title)
 				if url != None:
-					listOfSongs.append({"Title": title, "URL": url, "Lyrics": grabLyrics(url)})
+					lyrics = grabLyrics(url)
+					listOfSongs.append({"Title": title, "URL": url, "Lyrics": lyrics, "Sentiment": getLyricSentiment(lyrics)})
 			except:
 				print("Error on {}".format(i))
 			print("Done with {}".format(i))
