@@ -7,10 +7,10 @@ def grabSite(url):
 	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 	return requests.get(url, headers=headers)
 
-def genSongUrl(songTitle, baseUrl='https://www.azlyrics.com/lyrics/panicatthedisco/'):
+def genSongUrl(songTitle, baseUrl='https://www.azlyrics.com/lyrics/panicatthedisco/{0}.html'):
 	string = ''.join(re.findall('\w+', str(songTitle))).lower()
 	if len(string) > 2:
-		return baseUrl + string
+		return baseUrl.format(string)
 	else:
 		return None
 
