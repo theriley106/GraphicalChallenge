@@ -81,7 +81,7 @@ var barChart = new Chart(densityCanvas, {
   type: 'bar',
   data: {
     labels: [{% for info in DATABASE %}
-                "{{ info.Title }}",
+                "{{ info.Sentiment }}",
                 {% endfor %}],
     datasets: [densityData],
   },

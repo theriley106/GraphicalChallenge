@@ -4,11 +4,8 @@ import glob
 DATABASE = {}
 
 DATASET = []
-for line in open(glob.glob('static/Jan30.json')[0], 'rb'):
-	try:
-		DATASET.append(json.loads(line))
-	except:
-		pass
+DATASET = json.load(open(glob.glob('static/Jan31.json')[0]))
+print DATASET
 
 def returnTime(timestamp):
 	return (
