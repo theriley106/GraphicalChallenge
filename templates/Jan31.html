@@ -36,7 +36,7 @@ Chart.defaults.global.defaultFontSize = 18;
 var densityData = {
   label: '/r/DataIsBeautiful Post Score Average (By Weekday)',
   data: [{% for info in DATABASE %}
-                {{ info.Score }},
+                {{ info.Sentiment }},
                 {% endfor %}],
   backgroundColor: [
   {% for info in DATABASE %}
@@ -81,7 +81,7 @@ var barChart = new Chart(densityCanvas, {
   type: 'bar',
   data: {
     labels: [{% for info in DATABASE %}
-                "{{ info.Day }}",
+                "{{ info.Title }}",
                 {% endfor %}],
     datasets: [densityData],
   },
