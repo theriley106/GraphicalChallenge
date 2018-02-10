@@ -1,9 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
-
-  <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ASCII">  <meta charset="UTF-8">
   <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
   <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
-  <title>/r/DataIsBeautiful Post Score Average (By Weekday)</title>
+  <title>Panic At The Disco Lyrics by Sentiment</title>
 
   <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Lato">
 
@@ -36,7 +35,7 @@ Chart.defaults.global.defaultFontSize = 18;
 var densityData = {
   label: '/r/DataIsBeautiful Post Score Average (By Weekday)',
   data: [{% for info in DATABASE %}
-                {{ info.Sentiment }},
+                {{ info.Sentiment|round(1, 'floor') }},
                 {% endfor %}],
   backgroundColor: [
   {% for info in DATABASE %}
@@ -72,8 +71,11 @@ yAxes: [
           labelString: '# of upvotes',
           fontColor: "#546372"
       }
-  }
-]
+  },
+],
+  xAxes: [{
+      display: false
+  }],
 }
  };
 
@@ -81,7 +83,7 @@ var barChart = new Chart(densityCanvas, {
   type: 'bar',
   data: {
     labels: [{% for info in DATABASE %}
-                "{{ info.Sentiment }}",
+                {{ info.Title|tojson }},
                 {% endfor %}],
     datasets: [densityData],
   },

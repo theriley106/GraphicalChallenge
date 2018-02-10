@@ -3,9 +3,7 @@ import datetime
 import glob
 DATABASE = {}
 
-DATASET = []
 DATASET = json.load(open(glob.glob('static/Jan31.json')[0]))
-print DATASET
 
 def returnTime(timestamp):
 	return (
@@ -23,4 +21,8 @@ def cleanData():
 	return DATA
 
 def getDatabase():
-	return DATASET
+	DATA = []
+	for value in DATASET:
+		value['Sentiment'] = float(value["Sentiment"])
+		DATA.append(value)
+	return DATA
