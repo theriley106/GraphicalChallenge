@@ -307,6 +307,14 @@ def Jan31():
 	#DATABASE=Jan25.getDatabase()
 	return render_template("Jan31.html", DATABASE=DATABASE)
 
+@app.route('/Feb1/', methods=['GET'])
+def Feb1():
+	import Feb1
+	DATABASE=Feb1.getDatabase()
+
+	return render_template("Feb1.html", DATABASE=DATABASE)
+
+
 if __name__ == "__main__":
 	app.run()
 
