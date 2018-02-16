@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>College Mentions on /r/ApplyingToCollege</title>
+    <title>Where is Reddit Applying to College?</title>
     <script src="{{ url_for('static',filename='js/Chart.bundle.js') }}"></script>
     <script src="{{ url_for('static',filename='js/utils.js') }}"></script>
     <style>
@@ -25,7 +25,7 @@ new Chart(document.getElementById("bar-chart-grouped"), {
       labels: [{% for info in DATABASE %}"{{ info.School }}",{% endfor %}],
       datasets: [
         {
-          label: "Mentions",
+          label: "# of Mentions in /r/ApplyToCollege",
           backgroundColor: "#3e95cd",
           data: [{% for info in DATABASE %}"{{ info.Mentions }}",{% endfor %}]
         }
@@ -38,19 +38,36 @@ new Chart(document.getElementById("bar-chart-grouped"), {
         stacked: false,
         beginAtZero: true,
         scaleLabel: {
-            labelString: 'Month'
+            labelString: 'Mentions'
         },
         ticks: {
             stepSize: 1,
             min: 0,
             autoSkip: false
         }
-    }]
-},
+    }],
+    yAxes: [
+        {
+            id: 'y-axis-1',
+            display: true,
+            position: 'left',
+            ticks: {
+                callback: function(value, index, values) {
+                    return value;
+                }
+            },
+            scaleLabel:{
+                display: true,
+                labelString: '# of comments mentioning school',
+                fontColor: "#546372"
+            }
+        }
+      ]
+      },
 
       title: {
         display: true,
-        text: 'College Mentions'
+        text: 'Where is Reddit Applying to College?'
       }
     }
 });
