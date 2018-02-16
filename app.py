@@ -317,7 +317,7 @@ def Feb1():
 @app.route('/Feb2/', methods=['GET'])
 def Feb2():
 	import Feb2
-	DATABASE=Feb2.getDatabase()
+	DATABASE=Feb2.getDatabase()[:-1]
 
 	return render_template("Feb2.html", DATABASE=DATABASE)
 
