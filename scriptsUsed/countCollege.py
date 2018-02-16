@@ -4,6 +4,7 @@ reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 import json
 import glob
+import traceback
 DB = {"Total": 0}
 finalList = {}
 listF = []
@@ -14,13 +15,35 @@ for val in listOfSchools:
 		if len(name) > 1:
 			finalList[name.lower().strip()] = schoolName.lower().strip()
 
+def checkWords(word, text):
+	word = word.split(" ")
+	text = text.split(" ")
+	if len(word) > 2:
+		totalCount = 0
+		if word[0] in text and word[1] in text:
+			count1 = text.count(word[0])
+			count2 = text.count(word[1])
+			if count1 < count2:
+				totalCount += count1
+			else:
+				totalCount += count2
+	else:
+		totalCount += text.count(word[0])
+	return totalCount
+
+
+
+
 def getCollege(text):
 	info = []
 	# input string of text and it returns colleges inside
 	for college in finalList.keys():
-		if college in str(text):
-			for i in range(str(text).count(college)):
-				info.append(finalList[college])
+		for i in range(len(college.split(" "))):
+			if '"{}'.format(college.split(" ")[i]) in str(list(text.split(" "))):
+				for i in range(str(text).count('"{}'.format(college.split(" ")[i]))):
+					info.append(finalList[college])
+					break
+
 	return info
 
 def ldJsonToList(jsonFile):
@@ -31,12 +54,14 @@ def ldJsonToList(jsonFile):
 		except:
 			pass
 	return DATA
-
-for comment in ldJsonToList("SchoolList.json"):
+listOfAllSchoolNames = ldJsonToList("SchoolList.json")
+for i, comment in enumerate(listOfAllSchoolNames):
+	print("{} / {}".format(i, len(listOfAllSchoolNames)))
 	try:
 		for val in getCollege(comment['body']):
 			listF.append(val)
-	except:
+	except Exception as exp:
+		traceback.print_exc()
 		pass
 DATA = {}
 
