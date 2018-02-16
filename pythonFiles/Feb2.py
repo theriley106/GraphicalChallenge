@@ -27,4 +27,4 @@ for key, value in listOfSchoolInfo.items():
 
 def getDatabase():
 	return sorted(allInfo, key=lambda k: k['Mentions'], reverse=False)
-print getDatabase()
+
