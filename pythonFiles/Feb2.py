@@ -19,7 +19,7 @@ listOfSchoolInfo = json.load(open(glob.glob('static/Feb2.json')[0], 'rb'))
 allInfo = []
 
 for key, value in listOfSchoolInfo.items():
-	allInfo.append({"School": key, "Mentions": value})
+	allInfo.append({"School": key.title(), "Mentions": value})
 
 
 #print allInfo
