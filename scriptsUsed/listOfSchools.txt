@@ -1,0 +1,50 @@
+Princeton University | princeton
+Harvard University | harvard
+University of Chicago | uchicago | uc hicago
+Yale University | yale
+Columbia University | columbia
+Massachusetts Institute of Technology | mit | m.i.t
+Stanford University | stanford | "stanford"
+University of Pennsylvania | upenn | wharton | u penn
+Duke University | duke
+California Institute of Technology | caltech
+Dartmouth College | dartmouth
+Johns Hopkins University | john hopkins | jhu | johns hopkins
+Northwestern University | northwestern
+Brown University | brown
+Cornell University | cornell
+Rice University | rice
+Vanderbilt University | vanderbilt
+University of Notre Dame | notre dame
+Washington University in St. Louis | wustl | w.u.s.t.l
+Georgetown University | georgetown
+Emory University | emory
+University of California--Berkeley | uc berkeley | berkeley | ucb
+University of California--Los Angeles | ucla
+University of Southern California | usc
+Carnegie Mellon University | cmu | carnegie mellon | carnegie melon
+University of Virginia | uva | u.v.a
+Wake Forest University | wake forest
+Tufts University | tufts
+New York University | nyu | n.y.u
+University of North Carolina--Chapel Hill | unc chapel hill | chapel hill | uncch
+Boston College | bc
+College of William and Mary | william and mary | william & mary | w and m | w&m | w & m
+Brandeis University | brandeis
+Georgia Institute of Technology | gatech | gtech | georgia tech | ga tech
+University of Rochester | rochester
+Boston University | bu
+Case Western Reserve University | case western | cwru
+University of California--Santa Barbara | ucsb | u.c.s.b | uc santa barbara
+Northeastern University | northeastern
+Tulane University | tulane
+Rensselaer Polytechnic Institute | rpi | rensselaer | r.p.i
+University of California--Irvine | uc irvine | irvine | ucirvine | uci
+University of California--San Diego | ucsd | uc san diego
+University of Florida | u of f | uoff
+Lehigh University | lehigh
+Pepperdine University | pepperdine
+University of California--Davis | ucd | uc davis | davis
+University of Miami | miami
+University of Wisconsin--Madison | uw madison | uwmadison | university of wisconsin
+University of Michigan--Ann Arbor | umich | university of michigan | u mich
