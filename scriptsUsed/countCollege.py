@@ -4,6 +4,7 @@ reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 import json
 import glob
+import re
 import traceback
 DB = {"Total": 0}
 finalList = {}
@@ -22,7 +23,13 @@ def getCollege(text):
 	info = []
 	# input string of text and it returns colleges inside
 	for college in finalList.keys():
-		if college.lower() in text.lower():
+		if college == 'mit':
+			newText = re.findall("(\w+)", str(text).lower())
+			# Extracts all words from collegeText
+			if 'mit' in newText:
+				for i in range(newText.count('mit')):
+					info.append(finalList["mit"])
+		elif college.lower() in text.lower():
 			#print str(text.split(" ")).lower()
 			for i in range(text.lower().count(college.lower())):
 				info.append(finalList[college])
