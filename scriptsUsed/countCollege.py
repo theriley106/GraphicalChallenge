@@ -5,13 +5,22 @@ listOfSchools = open("listOfSchools.txt").read().split("\n")
 for val in listOfSchools:
 	schoolName = val.partition("|")[0].strip()
 	for name in val.split("|"):
-		finalList[name.lower().strip()] = schoolName.lower().strip()
-print finalList
-while True:
-	print(finalList[raw_input("schoolName: ").lower()])
-'''def getCollege(text):
-	# input string of text and it returns colleges inside
+		if len(name) > 1:
+			finalList[name.lower().strip()] = schoolName.lower().strip()
 
+def getCollege(text):
+	info = []
+	# input string of text and it returns colleges inside
+	for college in finalList.keys():
+		if college in str(text):
+			for i in range(str(text).count(college)):
+				info.append(finalList[college])
+	return info
+
+
+while True:
+	print getCollege(raw_input("Text: "))
+'''
 for vals in json.load(open("SATFlair.json")):
 	if vals['author_flair_text'] not in DB:
 		DB[vals['author_flair_text']] = 0
