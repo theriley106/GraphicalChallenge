@@ -317,6 +317,11 @@ def Feb1():
 @app.route('/Feb2/', methods=['GET'])
 def Feb2():
 	import Feb2
+	date = sys._getframe().f_code.co_name
+	#print (float(listOf99) / float(2143)) * 100
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
 	DATABASE=Feb2.getDatabase()[:-1]
 
 	return render_template("Feb2.html", DATABASE=DATABASE)
