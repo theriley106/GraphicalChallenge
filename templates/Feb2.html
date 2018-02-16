@@ -22,19 +22,19 @@
 new Chart(document.getElementById("bar-chart-grouped"), {
     type: 'bar',
     data: {
-      labels: [{% for info in DATABASE %}"{{ info.date }}",{% endfor %}],
+      labels: [{% for info in DATABASE %}"{{ info.School }}",{% endfor %}],
       datasets: [
         {
           label: "Mentions",
           backgroundColor: "#3e95cd",
-          data: [{% for info in DATABASE %}"{{ info.mentions }}",{% endfor %}]
+          data: [{% for info in DATABASE %}"{{ info.Mentions }}",{% endfor %}]
         }
       ]
     },
     options: {
       title: {
         display: true,
-        text: 'Cardano Mentions'
+        text: 'College Mentions'
       }
     }
 });
