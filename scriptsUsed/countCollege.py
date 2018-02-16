@@ -1,6 +1,8 @@
 import json
+import glob
 DB = {"Total": 0}
 finalList = {}
+listF = []
 listOfSchools = open("listOfSchools.txt").read().split("\n")
 for val in listOfSchools:
 	schoolName = val.partition("|")[0].strip()
@@ -17,9 +19,28 @@ def getCollege(text):
 				info.append(finalList[college])
 	return info
 
+def ldJsonToList(jsonFile):
+	DATA = []
+	for var in open(glob.glob(jsonFile)[0], 'rb').read().split('\n'):
+		try:
+			DATA.append(json.loads(var))
+		except:
+			pass
+	return DATA
 
-while True:
-	print getCollege(raw_input("Text: "))
+for comment in ldJsonToList("SchoolList.json"):
+	try:
+		for val in getCollege(comment['body']):
+			listF.append(val)
+	except:
+		pass
+DATA = {}
+
+for val in list(set(listF)):
+	DATA[val] = listF.count(val)
+
+
+print DATA
 '''
 for vals in json.load(open("SATFlair.json")):
 	if vals['author_flair_text'] not in DB:
