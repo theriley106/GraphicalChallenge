@@ -15,22 +15,6 @@ for val in listOfSchools:
 		if len(name) > 1:
 			finalList[name.lower().strip()] = schoolName.lower().strip()
 
-def checkWords(word, text):
-	word = word.split(" ")
-	text = text.split(" ")
-	if len(word) > 2:
-		totalCount = 0
-		if word[0] in text and word[1] in text:
-			count1 = text.count(word[0])
-			count2 = text.count(word[1])
-			if count1 < count2:
-				totalCount += count1
-			else:
-				totalCount += count2
-	else:
-		totalCount += text.count(word[0])
-	return totalCount
-
 
 
 
@@ -59,8 +43,6 @@ for i, comment in enumerate(listOfAllSchoolNames):
 		collegeInText = getCollege(comment['body'])
 		for val in collegeInText:
 			listF.append(val)
-		if i % 1000 == 0:
-			print("{} - {}".format(comment['body'], collegeInText))
 	except Exception as exp:
 		traceback.print_exc()
 		pass
