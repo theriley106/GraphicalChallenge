@@ -7,7 +7,7 @@ Massachusetts Institute of Technology | mit | m.i.t
 Stanford University | stanford | "stanford"
 University of Pennsylvania | upenn | wharton | u penn
 Duke University | duke
-California Institute of Technology | caltech
+California Institute of Technology | caltech | cal tech
 Dartmouth College | dartmouth
 Johns Hopkins University | john hopkins | jhu | johns hopkins
 Northwestern University | northwestern

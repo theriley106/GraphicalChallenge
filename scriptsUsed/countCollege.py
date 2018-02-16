@@ -38,9 +38,9 @@ def getCollege(text):
 	info = []
 	# input string of text and it returns colleges inside
 	for college in finalList.keys():
-		if college.lower() in text.lower().split(" "):
+		if college.lower() in text.lower():
 			#print str(text.split(" ")).lower()
-			for i in range(text.lower().split(" ").count(college.lower())):
+			for i in range(text.lower().count(college.lower())):
 				info.append(finalList[college])
 
 	return info
