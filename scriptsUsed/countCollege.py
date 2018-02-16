@@ -38,11 +38,10 @@ def getCollege(text):
 	info = []
 	# input string of text and it returns colleges inside
 	for college in finalList.keys():
-		for i in range(len(college.split(" "))):
-			if '"{}'.format(college.split(" ")[i]) in str(list(text.split(" "))):
-				for i in range(str(text).count('"{}'.format(college.split(" ")[i]))):
-					info.append(finalList[college])
-					break
+		if college.lower() in text.lower().split(" "):
+			#print str(text.split(" ")).lower()
+			for i in range(text.lower().split(" ").count(college.lower())):
+				info.append(finalList[college])
 
 	return info
 
@@ -56,10 +55,12 @@ def ldJsonToList(jsonFile):
 	return DATA
 listOfAllSchoolNames = ldJsonToList("SchoolList.json")
 for i, comment in enumerate(listOfAllSchoolNames):
-	print("{} / {}".format(i, len(listOfAllSchoolNames)))
 	try:
-		for val in getCollege(comment['body']):
+		collegeInText = getCollege(comment['body'])
+		for val in collegeInText:
 			listF.append(val)
+		if i % 1000 == 0:
+			print("{} - {}".format(comment['body'], collegeInText))
 	except Exception as exp:
 		traceback.print_exc()
 		pass
