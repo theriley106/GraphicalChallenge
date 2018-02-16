@@ -31,7 +31,23 @@ new Chart(document.getElementById("bar-chart-grouped"), {
         }
       ]
     },
+
     options: {
+      scales: {
+    xAxes: [{
+        stacked: false,
+        beginAtZero: true,
+        scaleLabel: {
+            labelString: 'Month'
+        },
+        ticks: {
+            stepSize: 1,
+            min: 0,
+            autoSkip: false
+        }
+    }]
+},
+
       title: {
         display: true,
         text: 'College Mentions'
