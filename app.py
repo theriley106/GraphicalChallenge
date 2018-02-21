@@ -326,6 +326,22 @@ def Feb2():
 
 	return render_template("Feb2.html", DATABASE=DATABASE)
 
+@app.route('/Feb3/', methods=['GET'])
+def Feb3():
+	DATABASE = []
+	try:
+		DATABASE = Feb3.getDatabase()
+	except:
+		import Feb3
+		DATABASE = Feb3.getDatabase()
+	date = sys._getframe().f_code.co_name
+	#print (float(listOf99) / float(2143)) * 100
+	if xUtilities.checkForScreenshot(date) == False:
+		threading.Thread(target=xUtilities.saveScreenshot, args=(date,)).start()
+		return "Getting Screenshot"
+	return render_template("Jan29.html", DATABASE=DATABASE)
+
+
 if __name__ == "__main__":
 	app.run()
 
