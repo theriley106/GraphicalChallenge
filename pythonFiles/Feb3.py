@@ -13,6 +13,11 @@ for i in range(7):
 	DATABASE[i] = []
 DATA = []
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+for commentData in DATASET:
+		e = int(returnTime(commentData["created_utc"]))
+		DATABASE[e].append(int(commentData['score']))
+	for e in range(7):
+		DATA.append({"Day": days[e], "Score": sum(DATABASE[e]) / float(len(DATABASE[e]))})
 def returnTime(timestamp):
 	return (
 	datetime.datetime.fromtimestamp(
@@ -20,13 +25,5 @@ def returnTime(timestamp):
 	).weekday()
 	)
 
-def cleanData():
-	for commentData in DATASET:
-		e = int(returnTime(commentData["created_utc"]))
-		DATABASE[e].append(int(commentData['score']))
-	for e in range(7):
-		DATA.append({"Day": days[e], "Score": sum(DATABASE[e]) / float(len(DATABASE[e]))})
-	return DATA
-
 def getDatabase():
-	return cleanData()
+	return DATA
