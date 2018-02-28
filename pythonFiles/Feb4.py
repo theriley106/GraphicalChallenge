@@ -1,5 +1,5 @@
 from textblob import TextBlob
-
+import glob
 femaleSentiment = []
 maleSentiment = []
 
