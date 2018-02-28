@@ -3,10 +3,10 @@ import glob
 femaleSentiment = []
 maleSentiment = []
 
-for comment in open(glob.glob("FemaleTwitterComments.txt")[0], 'rb').read().split('\n'):
+for comment in open(glob.glob("static/FemaleTwitterComments.txt")[0], 'rb').read().split('\n'):
 	femaleSentiment.append(TextBlob(comment).sentiment.polarity)
 
-for comment in open(glob.glob("MaleTwitterComments.txt")[0], 'rb').read().split('\n'):
+for comment in open(glob.glob("static/MaleTwitterComments.txt")[0], 'rb').read().split('\n'):
 	maleSentiment.append(TextBlob(comment).sentiment.polarity)
 
 
