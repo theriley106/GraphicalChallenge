@@ -341,6 +341,13 @@ def Feb3():
 		return "Getting Screenshot"
 	return render_template("Jan29.html", DATABASE=DATABASE)
 
+@app.route('/Feb4/', methods=['GET'])
+def Feb4():
+	DATABASE = Feb4.getDatabase()
+	return render_template("Jan29.html", DATABASE=DATABASE)
+
+
+
 
 if __name__ == "__main__":
 	app.run()
