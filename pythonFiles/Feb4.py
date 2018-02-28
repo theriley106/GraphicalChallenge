@@ -14,4 +14,6 @@ male = float(sum(maleSentiment)) / float(len(maleSentiment))
 female = float(sum(femaleSentiment)) / float(len(femaleSentiment))
 
 
-def
+def getDatabase():
+	return {"Male": male, "Female": female}
+
