@@ -360,6 +360,12 @@ def Mar17():
 	DATABASE = Mar17.getDatabase()
 	return render_template("Mar17.html", DATABASE=DATABASE)
 
+@app.route('/Mar18/', methods=['GET'])
+def Mar18():
+	import Mar18
+	DATABASE = Mar18.getDatabase()
+	return render_template("Mar18.html", DATABASE=DATABASE)
+
 
 
 
