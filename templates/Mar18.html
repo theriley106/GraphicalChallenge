@@ -36,7 +36,7 @@ Chart.defaults.global.defaultFontSize = 18;
 var densityData = {
   label: 'Hotness Rating',
   data: [{% for info in DATABASE %}
-                {{ info.Num }},
+                {{ info.Value }},
                 {% endfor %}],
   backgroundColor: [
   {% for info in DATABASE %}
