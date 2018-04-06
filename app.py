@@ -366,6 +366,29 @@ def Mar18():
 	DATABASE = Mar18.getDatabase()
 	return render_template("Mar18.html", DATABASE=DATABASE)
 
+@app.route('/Mar19/', methods=['GET'])
+def Mar19():
+	import Mar19
+	# Generates the overall analysis from /all
+	MHH = []
+	# Mean household income
+	dataset = Mar19.ResponseByZipAsLod()
+	# Returns the response time from each zip as a list of dictionaries
+	zipVal = Mar19.returnHousholdIncome()
+	# Returns the household incomes for each zip as a python dict
+	for zipC in Mar19.getZipCodes():
+		# Iterates through all zip codes in the dataset
+		MHH.append({"Zip": zipC, "MHH": int(zipVal[zipC]["Income"].replace(",", ""))})
+		# Appends the values to the mean household income dataset
+	MHH = sorted(MHH, key=itemgetter('MHH'), reverse=False)
+	# Sorts the values
+	distanceFrom = json.load(open("DATASETS/distance_from.json"))
+	# Loads the distance dataset
+	distanceFrom = sorted(distanceFrom, key=itemgetter('Distance'), reverse=False)
+	# Sorts the values
+	DATABASE = Mar19.getDatabase()
+	return render_template("zipResonseViz.html", DATABASE=DATABASE)
+
 
 
 
