@@ -410,6 +410,27 @@ def Mar20():
 	distanceFrom = sorted(distanceFrom, key=itemgetter('Distance'), reverse=False)
 	return render_template("distanceFrom.html", responseTimeData=dataset, MeanIncome=MHH, DistanceFrom=distanceFrom)
 
+@app.route('/Mar21/', methods=['GET'])
+def Mar21():
+	import Mar19
+	# Generates the overall analysis from /all
+	MHH = []
+	# Mean household income
+	dataset = Mar19.ResponseByZipAsLod()
+	# Returns the response time from each zip as a list of dictionaries
+	zipVal = Mar19.returnHousholdIncome()
+	# Returns the household incomes for each zip as a python dict
+	for zipC in Mar19.getZipCodes():
+		# Iterates through all zip codes in the dataset
+		MHH.append({"Zip": zipC, "MHH": int(zipVal[zipC]["Income"].replace(",", ""))})
+		# Appends the values to the mean household income dataset
+	MHH = sorted(MHH, key=itemgetter('MHH'), reverse=False)
+	# Sorts the values
+	distanceFrom = json.load(open("static/distance_from.json"))
+	# Loads the distance dataset
+	distanceFrom = sorted(distanceFrom, key=itemgetter('Distance'), reverse=False)
+	return render_template("meanIncome.html", responseTimeData=dataset, MeanIncome=MHH, DistanceFrom=distanceFrom)
+
 
 
 
