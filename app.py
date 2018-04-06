@@ -6,8 +6,10 @@ import csv
 import sqlite3 as lite
 import requests
 import threading
+import json
 import sys
 import xUtilities
+from operator import itemgetter
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
@@ -382,12 +384,10 @@ def Mar19():
 		# Appends the values to the mean household income dataset
 	MHH = sorted(MHH, key=itemgetter('MHH'), reverse=False)
 	# Sorts the values
-	distanceFrom = json.load(open("DATASETS/distance_from.json"))
+	distanceFrom = json.load(open("static/distance_from.json"))
 	# Loads the distance dataset
 	distanceFrom = sorted(distanceFrom, key=itemgetter('Distance'), reverse=False)
-	# Sorts the values
-	DATABASE = Mar19.getDatabase()
-	return render_template("zipResonseViz.html", DATABASE=DATABASE)
+	return render_template("zipResponseViz.html", responseTimeData=dataset, MeanIncome=MHH, DistanceFrom=distanceFrom)
 
 
 
