@@ -390,7 +390,7 @@ def Mar19():
 	return render_template("zipResponseViz.html", responseTimeData=dataset, MeanIncome=MHH, DistanceFrom=distanceFrom)
 
 @app.route('/Mar20/', methods=['GET'])
-def Mar19():
+def Mar20():
 	import Mar19
 	# Generates the overall analysis from /all
 	MHH = []
