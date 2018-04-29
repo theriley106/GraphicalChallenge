@@ -453,8 +453,8 @@ def Mar22():
 	return render_template("pieChart.html", responseTimeData=dataset, MeanIncome=MHH, DistanceFrom=distanceFrom)
 
 @app.route('/43', methods=['GET'])
-def Mar22():
-	import 43
+def viz43():
+	import viz43
 	# Generates the overall analysis from /all
 	MHH = []
 	# Mean household income
