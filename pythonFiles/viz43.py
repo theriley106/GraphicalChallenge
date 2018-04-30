@@ -46,4 +46,3 @@ def getDatabase():
 	for key, value in valueList.iteritems():
 		a.append({"Age": key, "Count": value})
 	return a
-print getDatabase()
