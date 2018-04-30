@@ -4,6 +4,7 @@ import re
 
 ageDB = []
 DATABASE = []
+valueList = {}
 
 with open(glob.glob('static/aac_shelter_outcomes.csv')[0], 'rb') as f:
 	reader = csv.reader(f)
@@ -29,7 +30,17 @@ for val in your_list:
 	except:
 		print("Error")
 
-print(sum(ageDB))
+float(sum(ageDB))
+
+for val in ageDB:
+	try:
+		valueList[str(val / 30)]
+	except:
+		valueList[str(val / 30)] = 0
+	valueList[str(val / 30)] += 1
+
+#print(float(sum(ageDB)) / len(ageDB))
+print valueList
 
 def getDatabase():
 	return DATABASE
