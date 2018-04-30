@@ -40,7 +40,10 @@ for val in ageDB:
 	valueList[str(val / 30)] += 1
 
 #print(float(sum(ageDB)) / len(ageDB))
-print valueList
 
 def getDatabase():
-	return DATABASE
+	a = []
+	for key, value in valueList.iteritems():
+		a.append({"Age": key, "Count": value})
+	return a
+print getDatabase()
