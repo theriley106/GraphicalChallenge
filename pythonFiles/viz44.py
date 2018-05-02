@@ -6,7 +6,7 @@ ageDB = []
 DATABASE = []
 valueList = {}
 
-listVal = json.load(glob.glob('static/messageWordCount.json')[0])
+listVal = json.load(open(glob.glob('static/messageWordCount.json')[0]))
 print listVal
 for val in your_list:
 	try:
