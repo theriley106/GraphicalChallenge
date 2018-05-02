@@ -457,6 +457,12 @@ def viz43():
 	import viz43
 	return render_template("viz43.html", DATABASE=viz43.getDatabase())
 
+@app.route('/44', methods=['GET'])
+def viz44():
+	import viz44
+	return render_template("viz44.html", DATABASE=viz44.getDatabase())
+
+
 
 
 
