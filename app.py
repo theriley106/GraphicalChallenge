@@ -463,6 +463,14 @@ def viz44():
 	return render_template("viz44.html", DATABASE=viz44.getDatabase())
 
 
+@app.route('/45', methods=['GET'])
+def viz45():
+	import viz45
+	DATABASE = viz45.getDatabase()
+	DATABASE = sorted(DATABASE, key=lambda k: k['Age'])
+	return render_template("viz45.html", DATABASE=DATABASE)
+
+
 
 
 
