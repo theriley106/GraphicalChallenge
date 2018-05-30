@@ -470,6 +470,12 @@ def viz45():
 	DATABASE = sorted(DATABASE, key=lambda k: k['Age'])
 	return render_template("viz45.html", DATABASE=DATABASE)
 
+@app.route('/46', methods=['GET'])
+def viz46():
+	import viz46
+	DATABASE = viz46.getDatabase()
+	return render_template("viz46.html", DATABASE=DATABASE)
+
 
 
 
