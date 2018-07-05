@@ -476,7 +476,11 @@ def viz46():
 	DATABASE = viz46.getDatabase()
 	return render_template("viz46.html", DATABASE=DATABASE)
 
-
+@app.route('/47/', methods=['GET'])
+def viz47():
+	import viz47
+	DATABASE=viz47.getDatabase()
+	return render_template("viz47.html", DATABASE=DATABASE)
 
 
 
