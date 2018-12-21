@@ -452,47 +452,53 @@ def Mar22():
 	distanceFrom = sorted(distanceFrom, key=itemgetter('Distance'), reverse=False)
 	return render_template("pieChart.html", responseTimeData=dataset, MeanIncome=MHH, DistanceFrom=distanceFrom)
 
-@app.route('/43', methods=['GET'])
+@app.route('/viz43', methods=['GET'])
 def viz43():
 	import viz43
 	return render_template("viz43.html", DATABASE=viz43.getDatabase())
 
-@app.route('/44', methods=['GET'])
+@app.route('/viz44', methods=['GET'])
 def viz44():
 	import viz44
 	return render_template("viz44.html", DATABASE=viz44.getDatabase())
 
 
-@app.route('/45', methods=['GET'])
+@app.route('/viz45', methods=['GET'])
 def viz45():
 	import viz45
 	DATABASE = viz45.getDatabase()
 	DATABASE = sorted(DATABASE, key=lambda k: k['Age'])
 	return render_template("viz45.html", DATABASE=DATABASE)
 
-@app.route('/46', methods=['GET'])
+@app.route('/viz46', methods=['GET'])
 def viz46():
 	import viz46
 	DATABASE = viz46.getDatabase()
 	return render_template("viz46.html", DATABASE=DATABASE)
 
-@app.route('/47/', methods=['GET'])
+@app.route('/viz47/', methods=['GET'])
 def viz47():
 	import viz47
 	DATABASE=viz47.getDatabase()
 	return render_template("viz47.html", DATABASE=DATABASE)
 
-@app.route('/48/', methods=['GET'])
+@app.route('/viz48/', methods=['GET'])
 def viz48():
 	import viz48
 	DATABASE=viz48.getDatabase()
 	return render_template("viz48.html", DATABASE=DATABASE)
 
-@app.route('/49/', methods=['GET'])
+@app.route('/viz49/', methods=['GET'])
 def viz49():
 	import viz49
 	DATABASE=viz49.getDatabase()
 	return render_template("viz49.html", DATABASE=DATABASE)
+
+@app.route('/viz50/', methods=['GET'])
+def viz50():
+	import viz50
+	DATABASE=viz50.getDatabase()
+	return render_template("viz50.html", DATABASE=DATABASE)
 
 
 if __name__ == "__main__":

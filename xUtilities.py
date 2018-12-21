@@ -23,7 +23,7 @@ def monthToMonth(shortMonth):
 		'Jun' : "June",
 		'Jul' : "July",
 		'Aug' : "August",
-		'Sep' : "September", 
+		'Sep' : "September",
 		'Oct' : "October",
 		'Nov' : "November",
 		'Dec' : "December"
@@ -100,7 +100,7 @@ def grabViewCount(redditURLList):
 			if 'k' in str(val).lower():
 				val = int(float(re.findall("([+-]?\d+\.\d+)", str(val))[0]) * 1000)
 			info.append({"URL": url, "ViewCount": val})
-	
+
 	a = redditLogin(headers)
 	threads = [threading.Thread(target=extractView, args=(url,)) for url in listOfLinks]
 	for thread in threads:
@@ -115,6 +115,8 @@ def genMakeIndex():
 		monthChoice = monthToMonth(re.findall('\D+', str(str(var).partition("/")[2]))[0])
 		if monthChoice != None:
 			DB.append({"Abbrev": re.findall('\D+', str(str(var).partition("/")[2]))[0], "Month": monthChoice, "Day": re.findall('\d+', str(str(var).partition("/")[2]))[0]})
+		elif 'viz' in str(var):
+			DB.append({"Abbrev": re.findall('\D+', str(str(var).partition("/")[2]))[0], "Month": "viz", "Day": re.findall('\d+', str(str(var).partition("/")[2]))[0]})
 	return sorted(DB, key=lambda k: int(k['Day']))
 
 if __name__ == '__main__':
