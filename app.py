@@ -488,7 +488,13 @@ def viz48():
 	DATABASE=viz48.getDatabase()
 	return render_template("viz48.html", DATABASE=DATABASE)
 
+@app.route('/49/', methods=['GET'])
+def viz49():
+	import viz49
+	DATABASE=viz49.getDatabase()
+	return render_template("viz49.html", DATABASE=DATABASE)
+
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug=True)
 
