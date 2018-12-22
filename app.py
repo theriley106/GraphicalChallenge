@@ -9,13 +9,22 @@ import threading
 import json
 import sys
 import xUtilities
+import getInfo
 from operator import itemgetter
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
 @app.route('/', methods=['GET'])
 def index():
-	return render_template("index.html", DATABASE=xUtilities.genMakeIndex())
+	infoVals = getInfo.all()
+	dbVals = xUtilities.genMakeIndex()
+	for i, val in enumerate(dbVals):
+		keyVal = val['Abbrev'] + val["Day"]
+		if keyVal not in infoVals:
+			dbVals[i]['description'] = "No Info"
+		else:
+			dbVals[i]['description'] = infoVals[keyVal]
+	return render_template("index.html", DATABASE=dbVals)
 
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
