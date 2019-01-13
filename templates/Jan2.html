@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>  
+<head>
 <script>
 window.onload = function () {
 
@@ -16,8 +16,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	axisX:{
 		includeZero: false
 	},
-	data: [{        
-		type: "line",       
+	data: [{
+		type: "line",
 		dataPoints: [
 		{% for info in DATABASE %}
 

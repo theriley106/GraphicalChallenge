@@ -26,7 +26,8 @@ new Chart(document.getElementById("bar-chart-grouped"), {
       datasets: [
         {
           label: "# of Mentions in /r/CSCareerQuestions",
-          backgroundColor: "#3e95cd",
+          fontSize: 20,
+          backgroundColor: window.chartColors.blue,
           data: [{% for info in DATABASE %}"{{ info.Mentions }}",{% endfor %}]
         }
       ]
@@ -42,6 +43,7 @@ new Chart(document.getElementById("bar-chart-grouped"), {
         },
         ticks: {
             stepSize: 1,
+            fontSize: 18,
             min: 0,
             autoSkip: false
         }
@@ -54,12 +56,14 @@ new Chart(document.getElementById("bar-chart-grouped"), {
             ticks: {
                 callback: function(value, index, values) {
                     return value;
-                }
+                },
+                fontSize: 18,
             },
             scaleLabel:{
                 display: true,
                 labelString: '# of comments mentioning company',
-                fontColor: "#546372"
+                fontSize: 20,
+                fontColor: window.chartColors.blue
             }
         }
       ]
@@ -67,6 +71,7 @@ new Chart(document.getElementById("bar-chart-grouped"), {
 
       title: {
         display: true,
+        fontSize: 22,
         text: 'Company Popularity on /r/CSCareerQuestions'
       }
     }
