@@ -24,7 +24,11 @@ def index():
 			dbVals[i]['description'] = "No Info"
 		else:
 			dbVals[i]['description'] = infoVals[keyVal]
-	return render_template("index.html", DATABASE=dbVals)
+	newList = []
+	for val in dbVals:
+		if val['description'] != "No Info":
+			newList.append(val)
+	return render_template("index.html", DATABASE=newList)
 
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
