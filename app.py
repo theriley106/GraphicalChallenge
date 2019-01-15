@@ -513,6 +513,18 @@ def viz50():
 	DATABASE=viz50.getDatabase()
 	return render_template("viz50.html", DATABASE=DATABASE)
 
+@app.route('/viz51', methods=['GET'])
+def viz51():
+	import viz51
+	DATABASE=viz51.getDatabase()
+	return render_template("viz51.html", DATABASE=DATABASE)
+
+@app.route('/viz52', methods=['GET'])
+def viz52():
+	import viz52
+	DATABASE=viz52.getDatabase()
+	return render_template("viz52.html", DATABASE=DATABASE)
+
 
 if __name__ == "__main__":
 	app.run(debug=True)
