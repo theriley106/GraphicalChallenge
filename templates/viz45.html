@@ -34,6 +34,8 @@ Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 45;
 
 var densityData = {
+
+    backgroundColor: "#FFFFFF",
   label: '/r/Teenagers Age Distribution (By Flair)',
   data: [{% for info in DATABASE %}
                 {{ info.Count }},
@@ -41,14 +43,14 @@ var densityData = {
   backgroundColor: [
   {% for info in DATABASE %}
 
-    'rgb(115, 122, 239)',
+     "#FF0000",
                 {% endfor %}
   ],
   borderColor: [
 
     {% for info in DATABASE %}
 
-    'rgb(115, 122, 239)',
+    '#FF0000',
                 {% endfor %}
   ],
   borderWidth: 2,
@@ -80,6 +82,7 @@ yAxes: [
 var barChart = new Chart(densityCanvas, {
   type: 'bar',
   data: {
+    backgroundColor: "#FFFFFF",
     labels: [{% for info in DATABASE %}
                 "{{ info.Age }}",
                 {% endfor %}],
