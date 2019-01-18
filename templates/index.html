@@ -77,6 +77,10 @@
 	.border-right {
     border-right: 2px solid black;
 }
+
+#idVal {
+    width:200px;
+}
   </style>
 </head>
 <body>
@@ -99,6 +103,122 @@
 
 
 
+<nav class="navbar navbar-light bg-light">
+<div class="container">
+<div class="row">
+
+    <div class="col-sm-3">
+        <button type="button" id="idVal" class="btn btn-info"><center>Data Visualizations</center></button>
+    </div>
+    <div class="col-sm-3">
+       <button type="button" id="idVal" class="btn btn-info"><center>Personal Projects</center></button>
+    </div>
+    <div class="col-sm-3">
+       <button type="button" id="idVal" class="btn btn-info"><center>Datasets</center></button>
+    </div>
+    <div class="col-sm-3">
+       <button type="button" id="idVal" class="btn btn-info"><center>Other Cool Stuff</center></button>
+    </div>
+
+</div>
+<div>
+
+
+
+</nav>
+
+
+
+<div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>I'm a current college freshman interested in Financial Technologies and Software Development. I have a background in UI Automation, with a focus on Android Devices and Automotive Infotainment Systems. I am heavily involved in the open-sourced software movement, and I have dozens of open-sourced projects on my personal Github.</p>
+
+                        </div><!--//content-->
+
+                        </div>
+                        </section>
+                        <section class="github section">
+
+	 						<div class="section-inner calendar">
+								<script
+		                              src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
+		                            ></script>
+
+		                            <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+		                            <link
+		                              rel="stylesheet"
+		                              href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
+		                            />
+		                            <script>
+		                                GitHubCalendar(".calendar", "theriley106");
+		                            </script>
+	                    </section>
+                        </div>
+
+
+
+                <div class="section col-md-4 col-sm-12 col-xs-12">
+
+            		<section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Capital One - <span class="place"><a href="#">Incoming Software Engineering Intern</a></span> <span class="year">(Summer 2019)</span></h3>
+                                <p></p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Clemson University - <span class="place"><a href="#">Software Engineering Intern</a></span> <span class="year">(Fall 2018)</span></h3>
+                                <p>Alexa Skill Team</p>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">NCR Corporation - <span class="place"><a href="#">Software Engineering Intern</a></span> <span class="year">(Spring 2019)</span></h3>
+                                <p>Software Innovation Labs</p>
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <h3 class="title">Lending Club - <span class="place"><a href="#">Software Engineering Intern</a></span> <span class="year">(Summer 2018)</span></h3>
+                                <p>Infrastructure & Internal Tools Team</p>
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <h3 class="title">Tesla - <span class="place"><a href="#">Automation Intern</a></span> <span class="year">(Summer 2017)</span></h3>
+                                <p>Infotainment Automation Team</p>
+                            </div><!--//item-->
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                    </section>
+</div>
+
+
+</div>
+
+
+<div class="container bg-3 text-center">
+  <h3>My Data Visualization Portfolio</h3><br>
+
+  <div class="row">
+
+{% for info in DATABASE %}
+
+
+     <div class="col-3 containerz border" style="width:100%; height:180px;">
+
+      <a href='{{ info.Abbrev }}{{ info.Day }}'>
+      <img src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" class="img-responsive" alt="Image" style="max-width:100%; max-height:100%;" class="image">
+      <div class="overlay">{{ info.description }}</div></a>
+    </div>
+
+{% endfor %}
+  </div>
+</div>
+
 <div class="container bg-3 text-center" style="width:98%;">
   <h3>My Data Visualization Portfolio</h3><br>
 
@@ -116,6 +236,9 @@
 
 {% endfor %}
   </div>
+</div>
+</div>
+</div>
 </div>
 
 <footer class="">
