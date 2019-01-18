@@ -118,9 +118,21 @@
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class="">
+      <center>
+     © Copyright <span id="currentYear"></span>, Christopher Lambert
+    </center>
 </footer>
 
+<script>
+		function setCopyrightDate(){
+		  year=new Date().getYear();
+		  if (year<1900)
+		    year+=1900;
+		  document.getElementById("currentYear").innerHTML = year;
+		}
+
+		setCopyrightDate();
+	</script>
 </body>
 </html>
