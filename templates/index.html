@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link id="theme-style" rel="stylesheet" href="{{ url_for('static',filename='assets/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/github-calendar/dist/github-calendar.css') }}"
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/plugins/github-activity/src/github-activity.css') }}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link id="theme-style" rel="stylesheet" href="{{ url_for('static',filename='assets/css/styles.css') }}">
+
+
+
+
+
+
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
@@ -69,13 +81,23 @@
 </head>
 <body>
 
+<header class="header">
+        <div class="container">
+            <img class="profile-image img-responsive pull-left" style="width:200px!important; height:200px!important;" src="{{ url_for('static',filename='profile.png') }}"  alt="Avatar" />
+            <div class="profile-content pull-left">
+                <h1 class="name">Christopher Lambert</h1>
+                <h2 class="desc">Full Stack Software Developer</h2>
+                <ul class="social list-inline">
+                    <li><a href="https://www.youtube.com/c/ChristopherLambert106"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/christopher-lambert106/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/theriley106"><i class="fa fa-github-alt"></i></a></li>
+                </ul>
+            </div><!--//profile-->
+            <a class="btn btn-cta-primary pull-right" href="mailto:christopherlambert106@gmail.com" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
+        </div><!--//container-->
+    </header><!--//header-->
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>Christopher Lambert</h1>
-    <p><a href="http://www.christopherlambert.me/static/ChristopherLambert.pdf">Resume</a> | <a href="https://www.linkedin.com/in/christopher-lambert106/">LinkedIn</a> | <a href="https://github.com/theriley106">GitHub</a> | <a href="https://www.kaggle.com/theriley106">Kaggle</a> | <a href="mailto:christopherlambert106@gmail.com">Email</a></p>
-  </div>
-</div>
+
 
 <div class="container bg-3 text-center" style="width:98%;">
   <h3>My Data Visualization Portfolio</h3><br>
