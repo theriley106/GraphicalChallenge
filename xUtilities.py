@@ -117,6 +117,8 @@ def genMakeIndex():
 			DB.append({"Abbrev": re.findall('\D+', str(str(var).partition("/")[2]))[0], "Month": monthChoice, "Day": re.findall('\d+', str(str(var).partition("/")[2]))[0]})
 		elif 'viz' in str(var):
 			DB.append({"Abbrev": re.findall('\D+', str(str(var).partition("/")[2]))[0], "Month": "viz", "Day": re.findall('\d+', str(str(var).partition("/")[2]))[0]})
+	DB.append({"Abbrev": "Mar", "Month": "Mar", "Day": "20"})
+	DB.append({"Abbrev": "Mar", "Month": "Mar", "Day": "19"})
 	return sorted(DB, key=lambda k: int(k['Day']))
 
 if __name__ == '__main__':
