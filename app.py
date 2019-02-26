@@ -9,6 +9,7 @@ import threading
 import json
 import sys
 import xUtilities
+import readKaggle
 import getInfo
 from operator import itemgetter
 sys.path.insert(0, 'pythonFiles/')
@@ -28,7 +29,7 @@ def index():
 	for val in dbVals:
 		if val['description'] != "No Info":
 			newList.append(val)
-	return render_template("index.html", DATABASE=newList)
+	return render_template("index.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
 
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
