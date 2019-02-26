@@ -203,25 +203,34 @@
   </div>
 </div>
 
-<div class="container bg-3 text-center">
-  <h3>Some of my Public Datasets</h3><br>
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Page Heading -->
+  <h1 class="my-4">Datasets
+    <small>Datasets I've posted on Kaggle</small>
+  </h1>
 
   <div class="row">
-
-{% for info in KAGGLE_DATABASE %}
-
-
-     <div class="col-3 containerz border" style="width:100%; height:180px;">
-
-      <a href='{{ info.link }}'>
-      <img src="{{ info.image }}" alt="Image" style="display: block;margin: 0 auto;max-width:80%; max-height:80%;" class="image">
-      <div class="overlay">{{ info.description }}</div></a>
+    {% for info in KAGGLE_DATABASE %}
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{ info.image }}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="{{ info.link }}">{{ info.title }}</a>
+          </h4>
+          <p class="card-text">{{ info.description }}</p>
+        </div>
+      </div>
     </div>
-
-{% endfor %}
+    {% endfor %}
   </div>
-</div>
+  <!-- /.row -->
 
+</div>
+<!-- /.container -->
 
 
 </div>
