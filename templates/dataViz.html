@@ -18,6 +18,13 @@
 {% endfor %}
   </div>
 </div>
-
+<script>
+  var element = document.getElementsByClassName("active");
+  for (i=0; i<element.length; i++){
+    element[i].classList.remove("active");
+  }
+  var element = document.getElementById("dataViz");
+element.classList.add("active");
+</script>
 
 {% include 'footer.html' %}
