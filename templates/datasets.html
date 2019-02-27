@@ -1,0 +1,29 @@
+{% include 'navbar.html' %}
+<!-- Page Content -->
+<div id="datasets" class="container">
+
+  <!-- Page Heading -->
+  <center>
+    <h3>Some of my Published Datasets</h3></center>
+  </br>
+
+  <div class="row">
+    {% for info in KAGGLE_DATABASE %}
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{ info.image }}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="{{ info.link }}">{{ info.title }}</a>
+          </h4>
+          <p class="card-text">{{ info.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% include 'footer.html' %}
