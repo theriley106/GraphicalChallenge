@@ -25,5 +25,13 @@
   <!-- /.row -->
 
 </div>
+<script>
+  var element = document.getElementsByClassName("active");
+  for (i=0; i<element.length; i++){
+    element[i].classList.remove("active");
+  }
+  var element = document.getElementById("datasetNav");
+element.classList.add("active");
+</script>
 <!-- /.container -->
 {% include 'footer.html' %}
