@@ -40,7 +40,21 @@
 	  width: 50%;
 	  max-width: 300px;
 	}
+  .social-part .fa{
+    padding-right:20px;
+}
+ul li a{
+    margin-right: 20px;
+}
 
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
 	/* Make the image to responsive */
 	.image {
 	  display: block;
@@ -99,18 +113,29 @@
             </div><!--//profile-->
             <a class="btn btn-cta-primary pull-right" href="mailto:christopherlambert106@gmail.com" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
         </div><!--//container-->
-    </header><!--//header-->
+        <nav class="navbar navbar-expand-sm   navbar-light">
+        
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav class="navbar navbar-default">
-  <center>
-  <div class="container-fluid">
-    <button type="button" onClick="document.getElementById('datasets').scrollIntoView();" style='' class="btn btn-primary">Data Visualizations</button>
-    <button type="button" style='' class="btn btn-primary">Datasets</button>
-    <button type="button" style='' class="btn btn-primary">Personal Projects</button>
-    <button type="button" style='' class="btn btn-primary">Other</button>
-  </div>
-</center>
-</nav>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="active nav-item">
+              <a class="nav-link" href="/">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Personal Projects</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Data Visualizations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Other Stuff</a>
+          </li>
+        </div>
+      </nav>
+    </header><!--//header-->
 
 <div class="container sections-wrapper">
         <div class="row">
