@@ -48,6 +48,38 @@ def dataVizPage():
 			newList.append(val)
 	return render_template("dataViz.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
 
+@app.route('/datasets', methods=['GET'])
+def datasets():
+	infoVals = getInfo.all()
+	dbVals = xUtilities.genMakeIndex()
+	for i, val in enumerate(dbVals):
+		keyVal = val['Abbrev'] + val["Day"]
+		if keyVal not in infoVals:
+			dbVals[i]['description'] = "No Info"
+		else:
+			dbVals[i]['description'] = infoVals[keyVal]
+	newList = []
+	for val in dbVals:
+		if val['description'] != "No Info":
+			newList.append(val)
+	return render_template("datasets.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
+
+@app.route('/personalProjects', methods=['GET'])
+def personalProjects():
+	infoVals = getInfo.all()
+	dbVals = xUtilities.genMakeIndex()
+	for i, val in enumerate(dbVals):
+		keyVal = val['Abbrev'] + val["Day"]
+		if keyVal not in infoVals:
+			dbVals[i]['description'] = "No Info"
+		else:
+			dbVals[i]['description'] = infoVals[keyVal]
+	newList = []
+	for val in dbVals:
+		if val['description'] != "No Info":
+			newList.append(val)
+	return render_template("personalProjects.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
+
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
 	import Jan1
