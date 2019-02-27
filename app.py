@@ -29,7 +29,8 @@ def index():
 	for val in dbVals:
 		if val['description'] != "No Info":
 			newList.append(val)
-	return render_template("index.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
+	aboutMe = open("static/About.txt")
+	return render_template("index.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll(), ABOUTME=aboutMe)
 
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
