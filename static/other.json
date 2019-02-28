@@ -5,5 +5,12 @@
 	"liveSiteURL": "",
 	"link": "http://www.cs.tufts.edu/comp/116/archive/spring2018/dross.pdf",
 	"image": "/tufts.jpg"
+},
+{
+	"title": "ACT Data Visualization",
+	"description": "A Data Visualization I created was used to emphasize the importance of high standardized test scores in the college application process",
+	"liveSiteURL": "",
+	"link": "https://chariotlearning.com/one-secret-to-seriously-strong-test-scores/",
+	"image": "/act.png"
 }
 ]
