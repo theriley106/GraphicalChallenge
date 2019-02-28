@@ -95,7 +95,8 @@ def other():
 	for val in dbVals:
 		if val['description'] != "No Info":
 			newList.append(val)
-	return render_template("other.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
+	other = json.loads(open("static/other.json").read())
+	return render_template("other.html", DATABASE=newList, OTHER=other)
 
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
