@@ -4,14 +4,32 @@
   <h3>Some of My Other Stuff</h3><br>
 
   <div class="row">
+
+{% for info in OTHER %}
+
+
+
+
+        <div class="col-md-4">
+          <img class="img-fluid rounded mb-3 mb-md-0" style="height:100px; width:100px;" src="{{ info.image }}" alt="">
+          <h3>{{info.title}}</h3>
+          <p>{{ info.description }}</p>
+          <a class="btn btn-primary" href="{{info.link}}">View</a>
+        </div>
+
+
+{% endfor %}
+
   </div>
 </div>
+<br>
 <script>
   var element = document.getElementsByClassName("active");
   for (i=0; i<element.length; i++){
     element[i].classList.remove("active");
   }
-  var element = document.getElementById("other");
+  var element = document.getElementById("personalProjects");
 element.classList.add("active");
 </script>
+
 {% include 'footer.html' %}
