@@ -78,7 +78,8 @@ def personalProjects():
 	for val in dbVals:
 		if val['description'] != "No Info":
 			newList.append(val)
-	return render_template("personalProjects.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
+	personalProjectDB = json.loads(open("static/personalProjects.json").read())
+	return render_template("personalProjects.html", DATABASE=newList, PERSONAL_PROJECTS=personalProjectDB)
 
 @app.route('/other', methods=['GET'])
 def other():
