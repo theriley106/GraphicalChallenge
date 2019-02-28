@@ -19,5 +19,12 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/SneakerBotTutorials",
 	"image": "/yeezy.png"
+},
+{
+	"title": "OutCaptcha",
+	"description": "Chrome Extension that Solves reCAPTCHA 2.0 Without Human Interaction",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/outCaptcha",
+	"image": "/captcha.png"
 }
 ]
