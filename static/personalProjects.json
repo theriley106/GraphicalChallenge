@@ -1,0 +1,9 @@
+[
+{
+	"title": "The WSB Index",
+	"description": "Algorithmic trading strategy to predict market volatility from the post/comment frequency on a popular trading forum",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/TheWSBIndex",
+	"url": "static/wsb.png"
+}
+]
