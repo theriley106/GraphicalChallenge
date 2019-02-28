@@ -5,5 +5,19 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/TheWSBIndex",
 	"image": "/wsb.png"
+},
+{
+	"title": "Headspace Bandwidth Reducer",
+	"description": "Restructuring Audio Files from a popular Guided Meditation App to Reduce Server-Side Bandwidth Costs by more than 40%",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/Headspace-Bandwidth-Reducer",
+	"image": "/headspace.png"
+},
+{
+	"title": "The WSB Index",
+	"description": "Algorithmic trading strategy to predict market volatility from the post/comment frequency on a popular trading forum",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/TheWSBIndex",
+	"image": "/wsb.png"
 }
 ]
