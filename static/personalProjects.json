@@ -7,7 +7,7 @@
 	"image": "/wsb.png"
 },
 {
-	"title": "Headspace Bandwidth Reducer",
+	"title": "Headspace Reducer",
 	"description": "Restructuring Audio Files from a popular Guided Meditation App to Reduce Server-Side Bandwidth Costs by more than 40%",
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/Headspace-Bandwidth-Reducer",
@@ -26,5 +26,13 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/outCaptcha",
 	"image": "/captcha.png"
+},
+{
+	"title": "FormerPizzaHuts",
+	"description": "A data science exercise to programmatically find buildings that used to be Pizza Hut restaurants.",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/FormerPizzaHuts",
+	"image": "/pizzahut.png"
 }
 ]
+
