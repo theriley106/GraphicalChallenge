@@ -61,6 +61,13 @@
 	"liveSiteURL": "http://turo-analytics.herokuapp.com/",
 	"githubLink": "https://github.com/theriley106/turo_analytics",
 	"image": "/turo.png"
+},
+{
+	"title": "my.Docter",
+	"description": "Voice powered management/tracking system for patients in long-term care at The Johns Hopkins Hospital",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/my.Doctor",
+	"image": "/jhu.png"
 }
 ]
 
