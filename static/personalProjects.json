@@ -40,6 +40,14 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/EchoLinguistics",
 	"image": "/echo.png"
-}
+},
+{
+	"title": "TrueResume",
+	"description": "Reducing subconscious gender/racial bias in the hiring process",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/TrueResume",
+	"image": "/resume.png"
+},
+
 ]
 
