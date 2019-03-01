@@ -68,6 +68,13 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/my.Doctor",
 	"image": "/jhu.png"
+},
+{
+	"title": "Amazon Textbook Arbitrage",
+	"description": "Finding Arbitrage opportunities in the Amazon textbook trade in marketplace",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/AmazonTextbookArbitrage",
+	"image": "/amazon.png"
 }
 ]
 
