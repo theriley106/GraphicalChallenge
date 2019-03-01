@@ -47,6 +47,20 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/TrueResume",
 	"image": "/resume.png"
+},
+{
+	"title": "Cubuyo",
+	"description": "Minimalistic Rubik's cube timer with CSV session summaries",
+	"liveSiteURL": "https://cubuyo.herokuapp.com/",
+	"githubLink": "https://github.com/theriley106/Cubuyo",
+	"image": "/cube.png"
+},
+{
+	"title": "Turo Analytics",
+	"description": "Analyzing the Turo rental car market",
+	"liveSiteURL": "http://turo-analytics.herokuapp.com/",
+	"githubLink": "https://github.com/theriley106/turo_analytics",
+	"image": "/turo.png"
 }
 ]
 
