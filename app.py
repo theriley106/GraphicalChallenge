@@ -79,6 +79,8 @@ def personalProjects():
 		if val['description'] != "No Info":
 			newList.append(val)
 	personalProjectDB = json.loads(open("static/personalProjects.json").read())
+	for val in personalProjectDB:
+		val['liveSite'] = (len(val['liveSiteURL']) > 1)
 	return render_template("personalProjects.html", DATABASE=newList, PERSONAL_PROJECTS=personalProjectDB)
 
 @app.route('/other', methods=['GET'])
