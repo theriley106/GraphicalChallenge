@@ -8,11 +8,11 @@
 {% for info in DATABASE %}
 
 
-     <div class="col-3 containerz border" style="width:100%; height:180px;">
-
-      <a href='{{ info.Abbrev }}{{ info.Day }}'>
-      <img src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="Image" style="max-width:100%; max-height:100%;" class="image">
-      <div class="overlay">{{ info.description }}</div></a>
+     <div class="col-md-4">
+          <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
+          <h3>{{ info.Abbrev }}{{ info.Day }}</h3>
+            <p>{{ info.description }}</p>
+            <a class="btn btn-primary" href="{{info.link}}">View</a>
     </div>
 
 {% endfor %}
