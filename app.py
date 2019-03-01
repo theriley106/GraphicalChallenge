@@ -81,7 +81,15 @@ def personalProjects():
 	personalProjectDB = json.loads(open("static/personalProjects.json").read())
 	for val in personalProjectDB:
 		val['liveSite'] = (len(val['liveSiteURL']) > 1)
-	return render_template("personalProjects.html", DATABASE=newList, PERSONAL_PROJECTS=personalProjectDB)
+	ppDB = []
+	while len(personalProjectDB) > 0:
+		a = []
+		for i in range(3):
+			if len(personalProjectDB) == 0:
+				break
+			a.append(personalProjectDB.pop(0))
+		ppDB.append(a)
+	return render_template("personalProjects.html", DATABASE=newList, PERSONAL_PROJECTS=ppDB)
 
 @app.route('/other', methods=['GET'])
 def other():

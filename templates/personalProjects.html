@@ -9,12 +9,10 @@
 <div class="container bg-3 text-center">
   <h3>Some of My Personal Projects</h3><br>
 
+{% for infoz in PERSONAL_PROJECTS %}
   <div class="row">
 
-{% for info in PERSONAL_PROJECTS %}
-
-
-
+{% for info in infoz %}
 
         <div class="col-md-4">
           <img class="personalProject img-fluid rounded mb-3 mb-md-0" style="height:100px; width:100px;" src="{{ info.image }}" alt="">
@@ -30,6 +28,7 @@
 {% endfor %}
 
   </div>
+  {% endfor %}
 </div>
 <br>
 <script>
