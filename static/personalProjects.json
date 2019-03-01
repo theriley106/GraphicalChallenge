@@ -33,6 +33,13 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/FormerPizzaHuts",
 	"image": "/pizzahut.png"
+},
+{
+	"title": "Echo Linguistics",
+	"description": "Using Alexa's Speech Synthesis Markup Language Support to extend Amazon Echo voice capabilities | This framework enables ~60 additional voices and ~70 additional languages on the Amazon Echo",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/EchoLinguistics",
+	"image": "/echo.png"
 }
 ]
 
