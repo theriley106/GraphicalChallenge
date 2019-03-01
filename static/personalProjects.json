@@ -75,6 +75,13 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/AmazonTextbookArbitrage",
 	"image": "/amazon.png"
+},
+{
+	"title": "SFPD Dispatch",
+	"description": "San Francisco Police Department Analytics for the Capital One Software Engineering Summit",
+	"liveSiteURL": "http://sfpd-data.herokuapp.com/",
+	"githubLink": "https://github.com/theriley106/SFPD-Dispatch",
+	"image": "/sfpd.png"
 }
 ]
 
