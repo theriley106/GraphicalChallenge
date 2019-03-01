@@ -12,5 +12,12 @@
 	"liveSiteURL": "",
 	"link": "https://chariotlearning.com/one-secret-to-seriously-strong-test-scores/",
 	"image": "/act.png"
+},
+{
+	"title": "SciKitLearn Contribution",
+	"description": "One of my open-source contributions to the popular Machine Learning framework SciKitLearn was merged on December 21st, 2017",
+	"liveSiteURL": "",
+	"link": "https://mail.python.org/archives/list/scikit-learn-commits@python.org/thread/YGLK6MMWO4GNJ26J4W7TLRPVY5FD4MNM/",
+	"image": "/scikitlearn.png"
 }
 ]
