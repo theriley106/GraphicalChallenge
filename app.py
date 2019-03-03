@@ -44,8 +44,8 @@ def uberAuth():
 	response = requests.get('https://api.uber.com/v1.2/me', headers=headers)
 	try:
 		f = response.text
-	except:
-		f = ""
+	except Exception as exp:
+		f = exp
 	return render_template("buttonUber.html", RESPONSE=f)
 
 
