@@ -32,7 +32,7 @@ def index():
 	aboutMe = open("static/About.txt").read()
 	return render_template("index.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll(), ABOUTME=aboutMe)
 
-@app.route('/uberAuth', methods=['GET'])
+@app.route('/uberAuthz', methods=['GET'])
 def uberAuth():
 	authCode = request.args.get("code")
 
