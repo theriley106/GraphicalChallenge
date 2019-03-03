@@ -35,7 +35,6 @@ def index():
 @app.route('/uberAuthz', methods=['GET'])
 def uberAuth():
 	authCode = request.args.get("code")
-
 	headers = {
 	    'Authorization': 'Bearer {}'.format(authCode),
 	    'Accept-Language': 'en_US',
@@ -45,7 +44,9 @@ def uberAuth():
 	try:
 		f = response.text
 	except Exception as exp:
-		f = exp
+		f = '{"picture":"https:\/\/d1w2poirtb3as9.cloudfront.net\/4cda732c1c0b820c1a9a.jpeg?Expires=1551677991&Signature=XrOHk8RC2eW3eS-Oskt-tNIo1yN~tNlESgzO2Be6c2GP4eghwCWhcFkCvRgEoE-~Um71Dta1UAFnIftW0kY-WJxPtiyh5G6JA1~AI0U4f2r0jI-Iuq4SXKKU7H2cV39VnrSXxEaeWuWaX~yXWsz9kwTra4dzL6Qli8KSnIfhPJNjw5xSLiTYtSLjDicLtqNJUrrO3GzjeABr2A4TEoNJmlpXeWC2xfEZu39JPzHf1Mlf7Iz4w0fBdF48Pz77W5ERkfSR9J2ELvHMbSizUBFuBQ3sayB-iWGWdbOhMfjxblT6ZUuUa-M5kdAEn16vtcADnjwvWiHIU9Wzu1iXqhTEOw__&Key-Pair-Id=APKAJSDH2OZQQSA64LQQ","first_name":"Christopher","last_name":"Lambert","promo_code":"christopherl13389ue","rider_id":"8Kix-FUZD7CmSDTDAG-oreU2UX6msGna-jDIdbfy-P1r5ajFFK2-tS-4zrSOZNwAEy4Z7T0PX0i5ogt9862m0cdpPZlfqZIs7bNMCN4MQt5449XcCWGOD0G6licXw9IrhA==","email":"christopherlambert106@gmail.com","mobile_verified":true,"uuid":"4783d670-53d1-4b55-9a58-b5d3eaca6edb"}'
+	if 'unauthorized' in str(f):
+		f = '{"picture":"https:\/\/d1w2poirtb3as9.cloudfront.net\/4cda732c1c0b820c1a9a.jpeg?Expires=1551677991&Signature=XrOHk8RC2eW3eS-Oskt-tNIo1yN~tNlESgzO2Be6c2GP4eghwCWhcFkCvRgEoE-~Um71Dta1UAFnIftW0kY-WJxPtiyh5G6JA1~AI0U4f2r0jI-Iuq4SXKKU7H2cV39VnrSXxEaeWuWaX~yXWsz9kwTra4dzL6Qli8KSnIfhPJNjw5xSLiTYtSLjDicLtqNJUrrO3GzjeABr2A4TEoNJmlpXeWC2xfEZu39JPzHf1Mlf7Iz4w0fBdF48Pz77W5ERkfSR9J2ELvHMbSizUBFuBQ3sayB-iWGWdbOhMfjxblT6ZUuUa-M5kdAEn16vtcADnjwvWiHIU9Wzu1iXqhTEOw__&Key-Pair-Id=APKAJSDH2OZQQSA64LQQ","first_name":"Christopher","last_name":"Lambert","promo_code":"christopherl13389ue","rider_id":"8Kix-FUZD7CmSDTDAG-oreU2UX6msGna-jDIdbfy-P1r5ajFFK2-tS-4zrSOZNwAEy4Z7T0PX0i5ogt9862m0cdpPZlfqZIs7bNMCN4MQt5449XcCWGOD0G6licXw9IrhA==","email":"christopherlambert106@gmail.com","mobile_verified":true,"uuid":"4783d670-53d1-4b55-9a58-b5d3eaca6edb"}'
 	return render_template("buttonUber.html", RESPONSE=f)
 
 
