@@ -32,6 +32,11 @@ def index():
 	aboutMe = open("static/About.txt").read()
 	return render_template("index.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll(), ABOUTME=aboutMe)
 
+@app.route('/uberAuth', methods=['GET'])
+def uberAuth():
+	return render_template("buttonUber.html")
+
+
 @app.route('/dataVisualizations', methods=['GET'])
 def dataVizPage():
 	infoVals = getInfo.all()
