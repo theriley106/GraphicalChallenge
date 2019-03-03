@@ -34,7 +34,20 @@ def index():
 
 @app.route('/uberAuth', methods=['GET'])
 def uberAuth():
-	return render_template("buttonUber.html")
+	authCode = request.args.get("code")
+
+	headers = {
+	    'Authorization': 'Bearer {}'.format(authCode),
+	    'Accept-Language': 'en_US',
+	    'Content-Type': 'application/json',
+	}
+
+	response = requests.get('https://api.uber.com/v1.2/me', headers=headers)
+	try:
+		f = response.text
+	except:
+		f = ""
+	return render_template("buttonUber.html", RESPONSE=f)
 
 
 @app.route('/dataVisualizations', methods=['GET'])
