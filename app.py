@@ -41,7 +41,6 @@ def uberAuth():
 	    'Accept-Language': 'en_US',
 	    'Content-Type': 'application/json',
 	}
-
 	response = requests.get('https://api.uber.com/v1.2/me', headers=headers)
 	try:
 		f = response.text
