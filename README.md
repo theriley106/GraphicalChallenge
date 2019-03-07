@@ -43,4 +43,3 @@
 - [/r/WallStreetBets vs /r/All sentiment Analysis Visualization](http://graphical-challenge.herokuapp.com/Jan15/)
 - [Barcodes on my Walmart Receipt... *Second MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan16/)
 - [Nootropic Discussion by Supplement](http://graphical-challenge.herokuapp.com/Jan20/)
-
