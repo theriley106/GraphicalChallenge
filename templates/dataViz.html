@@ -1,15 +1,24 @@
 {% include 'navbar.html' %}
-
+<style>
+.grumpy-image-wrapper {
+    height: 0;
+    padding-bottom: 50%;
+    border: 0px solid white;
+    position: relative;
+}
+</style>
 <div class="container bg-3 text-center">
   <h3>Some of My Data Visualizations</h3><br>
 
-  <div class="row">
+  <div class="row row-eq-height">
 
 {% for info in DATABASE %}
 
 
      <div class="col-md-4">
-          <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
+          <div class="grumpy-image-wrapper">
+            <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
+          </div>
           <h5>{{ info.description }}</h5>
             <a class="btn btn-primary" href="{{ info.Abbrev }}{{ info.Day }}">View</a>
     </div>
