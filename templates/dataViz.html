@@ -12,7 +12,7 @@
           <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
           <h3>{{ info.Abbrev }}{{ info.Day }}</h3>
             <p>{{ info.description }}</p>
-            <a class="btn btn-primary" href="{{info.link}}">View</a>
+            <a class="btn btn-primary" href="{{ info.Abbrev }}{{ info.Day }}">View</a>
     </div>
 
 {% endfor %}
