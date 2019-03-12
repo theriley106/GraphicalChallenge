@@ -16,8 +16,8 @@
 
 
      <div class="col-md-4">
-          <div style="height:150px;">
-            <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
+          <div style="height:150px;position: relative;">
+            <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;position: absolute;bottom:0;position: absolute;top: 0;left: 0;padding-bottom: 10px;right: 0;width: auto; /* to keep proportions */height: auto; /* to keep proportions */max-width: 100%; /* not to stand out from div */max-height: 100%; /* not to stand out from div */margin: auto auto 0; /* position to bottom and center *//* align-content:  center; */" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
           </div>
           <div style="height:40px;">
           <h5>{{ info.description }}</h5>
