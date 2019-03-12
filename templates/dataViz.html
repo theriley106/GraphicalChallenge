@@ -22,8 +22,10 @@
           <div style="height:40px;">
           <h5>{{ info.description }}</h5>
         </div>
-        <a class="btn btn-primary" href="{{ info.Abbrev }}{{ info.Day }}">View</a>
-            <a class="btn btn-primary" href="{{ info.Abbrev }}{{ info.Day }}">View</a>
+        {% if info.liveSite %}
+              <a class="btn btn-success" href="{{info.liveSite}}">Dataset</a>
+          {% endif %}
+            <a class="btn btn-primary" href="{{ info.Abbrev }}{{ info.Day }}">Visualization</a>
     </div>
 
 {% endfor %}
