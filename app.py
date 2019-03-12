@@ -54,22 +54,28 @@ def uberAuth():
 def dataVizPage():
 	infoVals = getInfo.all()
 	dbVals = xUtilities.genMakeIndex()
+
+	y = json.loads(open("links.json").read())
 	for i, val in enumerate(dbVals):
 		keyVal = val['Abbrev'] + val["Day"]
 		if keyVal not in infoVals:
 			dbVals[i]['description'] = "No Info"
 		else:
 			dbVals[i]['description'] = infoVals[keyVal]
+			if keyVal in y:
+				dbVals[i]['liveSite'] = y[keyVal]
 	newList = []
 	for val in dbVals:
 		if val['description'] != "No Info":
 			newList.append(val)
+
 	return render_template("dataViz.html", DATABASE=newList, KAGGLE_DATABASE=readKaggle.getAll())
 
 @app.route('/datasets', methods=['GET'])
 def datasets():
 	infoVals = getInfo.all()
 	dbVals = xUtilities.genMakeIndex()
+
 	for i, val in enumerate(dbVals):
 		keyVal = val['Abbrev'] + val["Day"]
 		if keyVal not in infoVals:
