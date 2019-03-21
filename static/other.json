@@ -31,5 +31,11 @@
 	"description": "Our project \"Ride Caring\" was given the Best Mobile Hack award at the California Institute of Technology in March 2019",
 	"link": "https://devpost.com/software/ride-caring",
 	"image": "/caltech.png"
+},
+{
+	"title": "Best Hack that Acts on the Physical World",
+	"description": "Presented by Uber's Advanced Technology Group at Caltech in March 2019",
+	"link": "https://devpost.com/software/ride-caring",
+	"image": "/uber.jpg"
 }
 ]
