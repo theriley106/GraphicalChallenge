@@ -49,5 +49,11 @@
 	"description": "My project \"EventbriteLocal\" was given Best use of the EventBrite API at Vanderbilt University in November 2018",
 	"link": "https://devpost.com/software/eventbritelocal-z72dha",
 	"image": "/vandy.png"
+},
+{
+	"title": "Best Use of SnapKit at UGAHacks 2019",
+	"description": "Our project \"Guardian Angel\" won the Best use of the Snapchat SDK in February 2019",
+	"link": "https://devpost.com/software/guardian-angel-6jxkz2",
+	"image": "/snap.png"
 }
 ]
