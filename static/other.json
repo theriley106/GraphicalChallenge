@@ -43,5 +43,11 @@
 	"description": "Our project \"Ride Caring\" was given Best IoT Hack presented by Qualcomm at Caltech in March 2019",
 	"link": "https://twitter.com/MLHacks/status/1102587459035115520",
 	"image": "/qualcomm.png"
+},
+{
+	"title": "Best Use of the Eventbrite API",
+	"description": "My project \"EventbriteLocal\" was given Best use of the EventBrite API at Vanderbilt University in November 2018",
+	"link": "https://devpost.com/software/eventbritelocal-z72dha",
+	"image": "/vandy.png"
 }
 ]
