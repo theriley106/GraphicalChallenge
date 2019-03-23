@@ -61,5 +61,11 @@
 	"description": "Our project \"True Resume\" won the Best use of the Google Cloud Platform in February 2019",
 	"link": "https://devpost.com/software/trueresume",
 	"image": "/google.png"
+},
+{
+	"title": "1st Place at HackGT 2019",
+	"description": "My project \"Telemetry\" won the First Place award presented by NCR Corporation in November 2018",
+	"link": "https://devpost.com/software/amazon-telemetry",
+	"image": "/gt.png"
 }
 ]
