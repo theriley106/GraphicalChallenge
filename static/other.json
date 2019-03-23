@@ -73,5 +73,11 @@
 	"description": "Presented by Citi Bank at the Georgia Institute of Technology in November 2018",
 	"link": "https://devpost.com/software/amazon-telemetry",
 	"image": "/citi.png"
+},
+{
+	"title": "1st Place NCR Midnight Challenge at HackGSU",
+	"description": "My cash register emulator was given the 1st Place award at the NCR Midnight Challenge at HackGSU",
+	"link": "https://twitter.com/TonyRBurdett/status/1048999752396935174",
+	"image": "/ncr.png"
 }
 ]
