@@ -55,5 +55,11 @@
 	"description": "Our project \"Guardian Angel\" won the Best use of the Snapchat SDK in February 2019",
 	"link": "https://devpost.com/software/guardian-angel-6jxkz2",
 	"image": "/snap.png"
+},
+{
+	"title": "Best Use of Google Cloud Platform at AuburnHacks 2019",
+	"description": "Our project \"True Resume\" won the Best use of the Google Cloud Platform in February 2019",
+	"link": "https://devpost.com/software/trueresume",
+	"image": "/google.png"
 }
 ]
