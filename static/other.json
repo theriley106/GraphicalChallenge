@@ -79,5 +79,11 @@
 	"description": "My cash register emulator was given the 1st Place award at the NCR Midnight Challenge at HackGSU",
 	"link": "https://twitter.com/TonyRBurdett/status/1048999752396935174",
 	"image": "/ncr.png"
+},
+{
+	"title": "Best Integrated Device at HackGSU 2018",
+	"description": "Our project \"Blind Date\" was given the Best Integrated Device award at HackGSU",
+	"link": "https://github.com/theriley106/BlindD8",
+	"image": "/gsu.png"
 }
 ]
