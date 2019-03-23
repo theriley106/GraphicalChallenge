@@ -63,9 +63,15 @@
 	"image": "/google.png"
 },
 {
-	"title": "1st Place at HackGT 2019",
+	"title": "1st Place at HackGT 2018",
 	"description": "My project \"Telemetry\" won the First Place award presented by NCR Corporation in November 2018",
 	"link": "https://devpost.com/software/amazon-telemetry",
 	"image": "/gt.png"
+},
+{
+	"title": "Best Voice Hack at HackGT 2018",
+	"description": "Presented by Citi Bank at the Georgia Institute of Technology in November 2018",
+	"link": "https://devpost.com/software/amazon-telemetry",
+	"image": "/citi.png"
 }
 ]
