@@ -109,5 +109,11 @@
 	"description": "Our project \"HackATeam\" was a finalist at the Georgia Tech Hackathon in Fall 2017",
 	"link": "https://devpost.com/software/hackateam",
 	"image": "/gt.png"
+},
+{
+	"title": "Best IoT Hack at VandyHacks 2017",
+	"description": "My project \"ForeverOnTime\" was given Best IOT Hack at Vanderbilt University in October 2017",
+	"link": "https://devpost.com/software/foreverontime",
+	"image": "/vandy.png"
 }
 ]
