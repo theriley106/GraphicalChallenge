@@ -81,6 +81,12 @@
 	"image": "/ncr.png"
 },
 {
+	"title": "3rd Place Overall at CECAS Spark 2019",
+	"description": "Our customer service oriented chat-bot won 3rd Place Overall at the CECAS Spark Challenge in Spring 2019",
+	"link": "https://cecasspark.com/",
+	"image": "/clemson.jpeg"
+},
+{
 	"title": "Best Integrated Device at HackGSU 2018",
 	"description": "Our project \"Blind Date\" was given the Best Integrated Device award at HackGSU in October 2018",
 	"link": "https://github.com/theriley106/BlindD8",
