@@ -103,5 +103,11 @@
 	"description": "Our project \"Alexa UofSC\" was given the Best Voice Hack award at the University of South Carolina Hackathon in April 2018",
 	"link": "https://devpost.com/software/alexa_uofsc",
 	"image": "/alexa.png"
+},
+{
+	"title": "Finalist at HackGT 2017",
+	"description": "Our project \"HackATeam\" was a finalist at the Georgia Tech Hackathon in Fall 2017",
+	"link": "https://devpost.com/software/hackateam",
+	"image": "/gt.png"
 }
 ]
