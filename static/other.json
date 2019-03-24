@@ -91,5 +91,11 @@
 	"description": "My project \"my.Doctor\" was a finalist at the Johns Hopkins University Medical Hackathon in September 2018",
 	"link": "https://devpost.com/software/my-doctor-id9k73",
 	"image": "/jhu.png"
+},
+{
+	"title": "1st Place Overall at ColaHacks 2018",
+	"description": "Our project \"Alexa UofSC\" was given first place overall at the University of South Carolina Hackathon in April 2018",
+	"link": "https://devpost.com/software/alexa_uofsc",
+	"image": "/usc.png"
 }
 ]
