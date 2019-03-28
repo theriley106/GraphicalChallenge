@@ -21,6 +21,13 @@
 	"image": "/scikitlearn.png"
 },
 {
+	"title": "Leetcode #989",
+	"description": "I wrote a Leetcode question titled \"Add to Array-Form of Integer\" and they published it on the site",
+	"liveSiteURL": "",
+	"link": "https://leetcode.com/problems/add-to-array-form-of-integer/",
+	"image": "/leetcode.png"
+},
+{
 	"title": "US Patent #62815758",
 	"description": "In March 2019, I filed and was approved for a provisional patent titled: \"Apparatus, Method and Article for Prevention of Proximity-Based Device Authentication within a Defined Radius\"",
 	"liveSiteURL": "",
