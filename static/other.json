@@ -82,6 +82,12 @@
 	"image": "/citi.png"
 },
 {
+	"title": "Best IoT Hack at HackGSU 2019",
+	"description": "Our project \"GP-US\" was given the Best IOT Hack award at Georgia State in March 2019",
+	"link": "https://devpost.com/software/gpus",
+	"image": "/gsu.png"
+}
+{
 	"title": "1st Place NCR Midnight Challenge at HackGSU",
 	"description": "My cash register emulator was given the 1st Place award at the NCR Midnight Challenge at HackGSU",
 	"link": "https://twitter.com/TonyRBurdett/status/1048999752396935174",
