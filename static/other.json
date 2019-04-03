@@ -70,10 +70,10 @@
 	"image": "/google.png"
 },
 {
-	"title": "1st Place at HackGT 2018",
-	"description": "My project \"Telemetry\" won the First Place award presented by NCR Corporation in November 2018",
-	"link": "https://devpost.com/software/amazon-telemetry",
-	"image": "/gt.png"
+	"title": "Best IoT Hack at HackGSU 2019",
+	"description": "Our project \"GP-US\" was given the Best IOT Hack award at Georgia State in March 2019",
+	"link": "https://devpost.com/software/gpus",
+	"image": "/gsu.png"
 },
 {
 	"title": "Best Voice Hack at HackGT 2018",
@@ -82,10 +82,10 @@
 	"image": "/citi.png"
 },
 {
-	"title": "Best IoT Hack at HackGSU 2019",
-	"description": "Our project \"GP-US\" was given the Best IOT Hack award at Georgia State in March 2019",
-	"link": "https://devpost.com/software/gpus",
-	"image": "/gsu.png"
+	"title": "1st Place at HackGT 2018",
+	"description": "My project \"Telemetry\" won the First Place award presented by NCR Corporation in November 2018",
+	"link": "https://devpost.com/software/amazon-telemetry",
+	"image": "/gt.png"
 },
 {
 	"title": "1st Place NCR Midnight Challenge at HackGSU",
