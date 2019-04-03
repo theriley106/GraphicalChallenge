@@ -1,46 +1,6 @@
-# GraphicalChallenge
+# Graphical Challenge
 
 
-## [Click here to view the Heroku App hosting the Visualizations](https://graphical-challenge.herokuapp.com)
+## [Link to my Personal Site](http://christopherlambert.me/)
 
-## Visualization History
-
-### External Site Mentions
-
-- [/r/Nootropics - January 17th - ~4,500 Views](https://www.reddit.com/r/Nootropics/comments/7r558j/i_did_some_text_analysis_on_rnootropics_here_are/)
-
-- [/r/DataIsBeautiful - January 14th - ~4,000 Views](https://www.reddit.com/r/dataisbeautiful/comments/7q8gif/oc_drug_popularity_on_rdarknetmarkets/)
-
-- [/r/DataIsBeautiful - January 11th - ~1,000 Views](https://www.reddit.com/r/dataisbeautiful/comments/7prj3k/oc_average_ramen_noodle_rating_by_country_based/)
-
-- [/r/SAT - January 23rd - ~450 Views](https://www.reddit.com/r/Sat/comments/7sjbil/rsat_user_flairs_by_score_data_visualization/)
-
-- [/r/ACT - January 22nd - ~350 Views](https://www.reddit.com/r/ACT/comments/7sbphp/ract_user_flairs_vs_general_population_composite/)
-
-- [/r/Bitcoin - January 12th - ~150 Views](https://www.reddit.com/r/Bitcoin/comments/7pxwlf/raskreddit_sentiment_towards_bitcoin_graphed/)
-
-
-
-
-### January
-
-- [Visualizing Clemson University Bus Routes using MapBox](https://graphical-challenge.herokuapp.com/Jan1)
-- [Finding the Frequency of the word "Tesla" on /r/WallStreetBets](https://graphical-challenge.herokuapp.com/Jan2/)
-- [Visualizing my Internship Applications](https://graphical-challenge.herokuapp.com/Jan4/)
-- [Sphinx Gas Price Discrepancies](http://graphical-challenge.herokuapp.com/Jan6/)
-- [Most Active Alexa Developers as of January 2018](https://graphical-challenge.herokuapp.com/Jan5/)
-- [/r/Wallstreetbets Sentiment Towards NASDAQ Tickers by Date](https://graphical-challenge.herokuapp.com/Jan3/AMD)
-- [Alexa Skill Reviews by Star *First MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan7/)
-- [Alexa Skill Categories by Percentage](http://graphical-challenge.herokuapp.com/Jan8/)
-- [Comments Containing Stock Tickers vs. Dow Jones Industrial Average](http://graphical-challenge.herokuapp.com/Jan9/)
-- [Top 10 Supplements on /r/Nootropics by Comment Frequency](http://graphical-challenge.herokuapp.com/Jan18/)
-- [/r/AskReddit Sentiment towards Bitcoin by Month](https://graphical-challenge.herokuapp.com/Jan12/)
-- [Top 10 Supplements on /r/StackAdvice by Comment Frequency](http://graphical-challenge.herokuapp.com/Jan19/)
-- [Occurances of the word "Yolo" on Reddit](http://graphical-challenge.herokuapp.com/Jan10/)
-- [Ramen Noodle Ratings by Country](http://graphical-challenge.herokuapp.com/Jan11/)
-- [Drug Popularity on /r/DarkNetMarkets](http://graphical-challenge.herokuapp.com/Jan13/)
-- [/r/Cryptocurrency Post Scores by Weekday](http://graphical-challenge.herokuapp.com/Jan14/)
-- [/r/WallStreetBets vs /r/All sentiment Analysis Visualization](http://graphical-challenge.herokuapp.com/Jan15/)
-- [Barcodes on my Walmart Receipt... *Second MatPlotLib Graph*](http://graphical-challenge.herokuapp.com/Jan16/)
-- [Nootropic Discussion by Supplement](http://graphical-challenge.herokuapp.com/Jan20/)
 
