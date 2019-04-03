@@ -106,6 +106,12 @@
 	"image": "/gsu.png"
 },
 {
+	"title": "Best Hack by State Farm",
+	"description": "Our project \"GP-US\" was given the Best Hack award by State Farm at the Georgia State University hackathon in March 2019",
+	"link": "https://devpost.com/software/gpus",
+	"image": "/sf.png"
+}
+{
 	"title": "Finalist at MedHacks 2018",
 	"description": "My project \"my.Doctor\" was a finalist at the Johns Hopkins University Medical Hackathon in September 2018",
 	"link": "https://devpost.com/software/my-doctor-id9k73",
