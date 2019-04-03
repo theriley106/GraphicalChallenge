@@ -22,7 +22,7 @@
 },
 {
 	"title": "Leetcode #989",
-	"description": "I wrote a Leetcode question titled \"Add to Array-Form of Integer\" and they published it on the site",
+	"description": "I wrote a Leetcode question titled \"Add to Array-Form of Integer\" and Leetcode decided to publish it on their site",
 	"liveSiteURL": "",
 	"link": "https://leetcode.com/problems/add-to-array-form-of-integer/",
 	"image": "/leetcode.png"
@@ -86,7 +86,7 @@
 	"description": "Our project \"GP-US\" was given the Best IOT Hack award at Georgia State in March 2019",
 	"link": "https://devpost.com/software/gpus",
 	"image": "/gsu.png"
-}
+},
 {
 	"title": "1st Place NCR Midnight Challenge at HackGSU",
 	"description": "My cash register emulator was given the 1st Place award at the NCR Midnight Challenge at HackGSU",
@@ -110,7 +110,7 @@
 	"description": "Our project \"GP-US\" was given the Best Hack award by State Farm at the Georgia State University hackathon in March 2019",
 	"link": "https://devpost.com/software/gpus",
 	"image": "/sf.png"
-}
+},
 {
 	"title": "Finalist at MedHacks 2018",
 	"description": "My project \"my.Doctor\" was a finalist at the Johns Hopkins University Medical Hackathon in September 2018",
