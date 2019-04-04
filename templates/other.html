@@ -1,5 +1,19 @@
 {% include 'navbar.html' %}
 
+<style>
+.textVal {
+  line-height: 2.5ex;
+  height: 7.5ex; /* 2.5ex for each visible line */
+  overflow: hidden;
+}
+
+.headerVal {
+  line-height: 2.5ex;
+  height: 5ex; /* 2.5ex for each visible line */
+  overflow: hidden;
+}
+</style>
+
 <div class="container bg-3 text-center">
   <h3>Other Stuff</h3><br>
 
@@ -12,8 +26,8 @@
 
         <div class="col-md-4" style='padding-top:25px;'>
           <img class="img-fluid rounded mb-3 mb-md-0" style="height:100px; width:100px;" src="{{ info.image }}" alt="">
-          <h3>{{info.title}}</h3>
-          <p>{{ info.description }}</p>
+          <h3 class="headerVal">{{info.title}}</h3>
+          <p class="textVal">{{ info.description }}</p>
           {% if info.link %}
               <a class="btn btn-primary" href="{{info.link}}">View</a>
           {% endif %}
