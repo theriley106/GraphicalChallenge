@@ -88,6 +88,12 @@
 	"description": "Book an Uber Ride without Mobile Internet Access",
 	"githubLink": "https://github.com/theriley106/UberSMS",
 	"image": "/uber.png"
+},
+{
+	"title": "QuickAlert",
+	"description": "Using Computer Vision to detect the presense of an active shooter in real time | Our team's project at Princeton University in 2018",
+	"githubLink": "https://devpost.com/software/firstalert",
+	"image": "/princeton.png"
 }
 ]
 
