@@ -92,7 +92,7 @@
 },
 {
 	"title": "QuickAlert",
-	"description": "Using Computer Vision to detect the presense of an active shooter in real time | Our team's project at Princeton University in 2018",
+	"description": "Using Computer Vision to detect the presense of an active shooter in real time | Project at Princeton University in 2018",
 	"liveSiteURL": "",
 	"githubLink": "https://devpost.com/software/firstalert",
 	"image": "/princeton.png"
