@@ -94,6 +94,12 @@
 	"description": "Using Computer Vision to detect the presense of an active shooter in real time | Our team's project at Princeton University in 2018",
 	"githubLink": "https://devpost.com/software/firstalert",
 	"image": "/princeton.png"
+},
+{
+	"title": "Lottery Analytics",
+	"description": "Ranking New Jersey Scratch-Off Tickets by Projected ROI",
+	"githubLink": "https://github.com/theriley106/NJLotteryAnalytics",
+	"image": "/1398.png"
 }
 ]
 
