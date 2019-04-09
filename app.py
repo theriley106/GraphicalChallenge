@@ -104,7 +104,7 @@ def personalProjects():
 			newList.append(val)
 	personalProjectDB = json.loads(open("static/personalProjects.json").read())
 	for val in personalProjectDB:
-		val['liveSite'] = (len(val['liveSiteURL']) > 1)
+		val['liveSite'] = (len(val.get('liveSiteURL', "")) > 1)
 	ppDB = []
 	while len(personalProjectDB) > 0:
 		a = []
