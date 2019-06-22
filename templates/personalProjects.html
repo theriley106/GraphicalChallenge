@@ -4,6 +4,17 @@
 .personalProject {
   padding-top:20px;
 }
+.textVal {
+  line-height: 2.5ex;
+  height: 7.5ex; /* 2.5ex for each visible line */
+  overflow: hidden;
+}
+
+.headerVal {
+  line-height: 2.5ex;
+  height: 2.5ex; /* 2.5ex for each visible line */
+  overflow: hidden;
+}
 </style>
 
 <div class="container bg-3 text-center">
@@ -16,8 +27,8 @@
 
         <div class="col-md-4">
           <img class="personalProject img-fluid rounded mb-3 mb-md-0" style="height:100px; width:100px;" src="{{ info.image }}" alt="">
-          <h3>{{info.title}}</h3>
-          <p>{{ info.description }}</p>
+          <h3 class="headerVal">{{info.title}}</h3>
+          <p class="textVal">{{ info.description }}</p>
           {% if info.liveSite %}
               <a class="btn btn-success" href="{{info.liveSiteURL}}">View Live Site</a>
           {% endif %}

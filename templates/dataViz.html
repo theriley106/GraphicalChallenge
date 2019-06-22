@@ -1,18 +1,31 @@
 {% include 'navbar.html' %}
-
+<style>
+.grumpy-image-wrapper {
+    height: 0;
+    padding-bottom: 50%;
+    border: 0px solid white;
+    position: relative;
+}
+</style>
 <div class="container bg-3 text-center">
   <h3>Some of My Data Visualizations</h3><br>
 
-  <div class="row">
+  <div class="row row-eq-height">
 
 {% for info in DATABASE %}
 
 
      <div class="col-md-4">
-          <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
-          <h3>{{ info.Abbrev }}{{ info.Day }}</h3>
-            <p>{{ info.description }}</p>
-            <a class="btn btn-primary" href="{{info.link}}">View</a>
+          <div style="height:150px;position: relative;">
+            <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;position: absolute;bottom:0;position: absolute;top: 0;left: 0;padding-bottom: 10px;right: 0;width: auto; /* to keep proportions */height: auto; /* to keep proportions */max-width: 100%; /* not to stand out from div */max-height: 100%; /* not to stand out from div */margin: auto auto 0; /* position to bottom and center *//* align-content:  center; */" src="Screenshots/{{ info.Abbrev }}{{ info.Day }}.png" alt="">
+          </div>
+          <div style="height:40px;">
+          <h5>{{ info.description }}</h5>
+        </div>
+        {% if info.liveSite %}
+              <a class="btn btn-success" href="{{info.liveSite}}">Dataset</a>
+          {% endif %}
+            <a class="btn btn-primary" href="{{ info.Abbrev }}{{ info.Day }}">Visualization</a>
     </div>
 
 {% endfor %}

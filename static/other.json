@@ -1,7 +1,7 @@
 [
 {
 	"title": "No-Name Bot",
-	"description": "I was used as a source in a paper from Tufts University about the economic impact of Sneakerbots",
+	"description": "My open source project was used as a source in a paper from Tufts University about the economic impact of Sneakerbots",
 	"liveSiteURL": "",
 	"link": "http://www.cs.tufts.edu/comp/116/archive/spring2018/dross.pdf",
 	"image": "/tufts.jpg"
@@ -19,5 +19,126 @@
 	"liveSiteURL": "",
 	"link": "https://mail.python.org/archives/list/scikit-learn-commits@python.org/thread/YGLK6MMWO4GNJ26J4W7TLRPVY5FD4MNM/",
 	"image": "/scikitlearn.png"
+},
+{
+	"title": "Leetcode #989",
+	"description": "I wrote a Leetcode question titled \"Add to Array-Form of Integer\" and Leetcode decided to publish it on their site",
+	"liveSiteURL": "",
+	"link": "https://leetcode.com/problems/add-to-array-form-of-integer/",
+	"image": "/leetcode.png"
+},
+{
+	"title": "US Patent #62815758",
+	"description": "In March 2019, I filed and was approved for a provisional patent titled: \"Apparatus, Method and Article for Prevention of Proximity-Based Device Authentication within a Defined Radius\"",
+	"liveSiteURL": "",
+	"image": "/patentlogo.png"
+},
+{
+	"title": "Best Mobile Hack at HackTech 2019",
+	"description": "Our project \"Ride Caring\" was given the Best Mobile Hack award at the California Institute of Technology in March 2019",
+	"link": "https://devpost.com/software/ride-caring",
+	"image": "/caltech.png"
+},
+{
+	"title": "Best Hack that Acts on the Physical World",
+	"description": "Presented by Uber's Advanced Technology Group at Caltech in March 2019",
+	"link": "https://devpost.com/software/ride-caring",
+	"image": "/uber.jpg"
+},
+{
+	"title": "Best IoT Hack at HackTech 2019",
+	"description": "Our project \"Ride Caring\" was given Best IoT Hack by Qualcomm at Caltech in March 2019",
+	"link": "https://twitter.com/MLHacks/status/1102587459035115520",
+	"image": "/qualcomm.png"
+},
+{
+	"title": "Best Use of the Eventbrite API at VandyHacks 2018",
+	"description": "Our project \"EventbriteLocal\" was given Best use of the EventBrite API at Vanderbilt University in November 2018",
+	"link": "https://devpost.com/software/eventbritelocal-z72dha",
+	"image": "/vandy.png"
+},
+{
+	"title": "Best Use of SnapKit at UGAHacks 2019",
+	"description": "Our project \"Guardian Angel\" won the Best use of the Snapchat SDK in February 2019",
+	"link": "https://devpost.com/software/guardian-angel-6jxkz2",
+	"image": "/snap.png"
+},
+{
+	"title": "Best Use of Google Cloud Platform at AuburnHacks 2019",
+	"description": "Our project \"True Resume\" won the Best use of the Google Cloud Platform in February 2019",
+	"link": "https://devpost.com/software/trueresume",
+	"image": "/google.png"
+},
+{
+	"title": "Best IoT Hack at HackGSU 2019",
+	"description": "Our project \"GP-US\" was given the Best IOT Hack award at Georgia State in March 2019",
+	"link": "https://devpost.com/software/gpus",
+	"image": "/gsu.png"
+},
+{
+	"title": "Best Voice Hack at HackGT 2018",
+	"description": "Presented by Citi Bank at the Georgia Institute of Technology in November 2018",
+	"link": "https://devpost.com/software/amazon-telemetry",
+	"image": "/citi.png"
+},
+{
+	"title": "1st Place at HackGT 2018",
+	"description": "Our project \"Telemetry\" won the First Place award presented by NCR Corporation in November 2018",
+	"link": "https://devpost.com/software/amazon-telemetry",
+	"image": "/gt.png"
+},
+{
+	"title": "1st Place NCR Midnight Challenge at HackGSU",
+	"description": "My cash register emulator was given the 1st Place award at the NCR Midnight Challenge at HackGSU",
+	"link": "https://twitter.com/TonyRBurdett/status/1048999752396935174",
+	"image": "/ncr.png"
+},
+{
+	"title": "3rd Place Overall at CECAS Spark 2019",
+	"description": "Our customer service oriented chat-bot won 3rd Place Overall at the CECAS Spark Challenge in Spring 2019",
+	"link": "https://cecasspark.com/",
+	"image": "/clemson.jpeg"
+},
+{
+	"title": "Best Integrated Device at HackGSU 2018",
+	"description": "Our project \"Blind Date\" was given the Best Integrated Device award at HackGSU in October 2018",
+	"link": "https://github.com/theriley106/BlindD8",
+	"image": "/gsu.png"
+},
+{
+	"title": "Best Hack by State Farm",
+	"description": "Our project \"GP-US\" was given the Best Hack award by State Farm at the Georgia State University hackathon in March 2019",
+	"link": "https://devpost.com/software/gpus",
+	"image": "/sf.png"
+},
+{
+	"title": "Finalist at MedHacks 2018",
+	"description": "Our project \"my.Doctor\" was a finalist at the Johns Hopkins University Medical Hackathon in September 2018",
+	"link": "https://devpost.com/software/my-doctor-id9k73",
+	"image": "/jhu.png"
+},
+{
+	"title": "1st Place Overall at ColaHacks 2018",
+	"description": "Our project \"Alexa UofSC\" was given first place overall at the University of South Carolina Hackathon in April 2018",
+	"link": "https://devpost.com/software/alexa_uofsc",
+	"image": "/usc.png"
+},
+{
+	"title": "Best Voice Hack at ColaHacks 2018",
+	"description": "Our project \"Alexa UofSC\" was given the Best Voice Hack award at the University of South Carolina Hackathon in April 2018",
+	"link": "https://devpost.com/software/alexa_uofsc",
+	"image": "/alexa.png"
+},
+{
+	"title": "Finalist at HackGT 2017",
+	"description": "Our project \"HackATeam\" was a finalist at the Georgia Tech Hackathon in Fall 2017",
+	"link": "https://devpost.com/software/hackateam",
+	"image": "/gt.png"
+},
+{
+	"title": "Best IoT Hack at VandyHacks 2017",
+	"description": "Our project \"ForeverOnTime\" was given the Best IOT Hack award at Vanderbilt University in October 2017",
+	"link": "https://devpost.com/software/foreverontime",
+	"image": "/vandy.png"
 }
 ]

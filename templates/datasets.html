@@ -1,10 +1,25 @@
 {% include 'navbar.html' %}
 <!-- Page Content -->
+
+<style>
+.textVal {
+  line-height: 2.5ex;
+  height: 5.0ex; /* 2.5ex for each visible line */
+  overflow: hidden;
+}
+
+.headerVal {
+  line-height: 2.5ex;
+  height: 5ex; /* 2.5ex for each visible line */
+  overflow: hidden;
+}
+</style>
+
 <div id="datasets" class="container">
 
   <!-- Page Heading -->
   <center>
-    <h3>Some of my Published Datasets</h3></center>
+    <h3>Some of my Kaggle Datasets</h3></center>
   </br>
 
   <div class="row">
@@ -12,11 +27,12 @@
     {% for info in KAGGLE_DATABASE %}
 
 
-     <div class="col-md-4">
+     <div class="col-md-4" style='padding-top:25px;'>
       <center>
-          <img class="img-fluid rounded mb-3 mb-md-0" style="width:200px;padding-top:10px;" src="{{ info.image }}" alt="">
-          <h3>{{ info.description }}</h3>
-            <p>{{ info.description }}</p>
+          <img class="img-fluid rounded mb-3 mb-md-0" style="width:150px;height:150px" src="{{ info.image }}" alt="">
+          <br>
+          <br>
+            <b><p class="textVal">{{ info.description }}</p></b>
             <a class="btn btn-primary" href="{{ info.link }}">View</a>
           </center>
     </div>

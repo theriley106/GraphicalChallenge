@@ -82,6 +82,27 @@
 	"liveSiteURL": "http://sfpd-data.herokuapp.com/",
 	"githubLink": "https://github.com/theriley106/SFPD-Dispatch",
 	"image": "/sfpd.png"
+},
+{
+	"title": "Ride Caring",
+	"description": "Book an Uber Ride without Mobile Internet Access",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/UberSMS",
+	"image": "/uber2.png"
+},
+{
+	"title": "QuickAlert",
+	"description": "Using Computer Vision to detect the presense of an active shooter in real time | Project at Princeton University in Spring 2018",
+	"liveSiteURL": "",
+	"githubLink": "https://devpost.com/software/firstalert",
+	"image": "/princeton.png"
+},
+{
+	"title": "Lottery Analytics",
+	"description": "Ranking New Jersey Scratch-Off Tickets by Projected ROI",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/NJLotteryAnalytics",
+	"image": "/1398.png"
 }
 ]
 

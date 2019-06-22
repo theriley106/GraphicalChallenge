@@ -1,1 +1,1 @@
-I'm a current college sophomore interested in the intersection between Computer Science and Finance.  My goal is to work as an algorithm developer in the high frequency trading space.
+I'm a college sophomore interested in the intersection between computer science and finance.  My goal is to work as a quant/algorithm developer in the high-frequency trading space.
