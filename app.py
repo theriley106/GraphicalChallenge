@@ -15,6 +15,10 @@ from operator import itemgetter
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
+@app.route('/callmemaybe', methods=["GET"])
+def redirectToHerokuApp():
+	return redirect("https://callmemaybeplatform.herokuapp.com/", code=302)
+
 @app.route('/', methods=['GET'])
 def index():
 	infoVals = getInfo.all()
