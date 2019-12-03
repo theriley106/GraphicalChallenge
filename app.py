@@ -631,6 +631,10 @@ def viz52():
 	DATABASE=viz52.getDatabase()
 	return render_template("viz52.html", DATABASE=DATABASE)
 
+@app.route('/walmartSKUs', methods=['GET'])
+def walmartSKUs():
+	return send_file("static/skus.txt", as_attachment=True)
+
 
 if __name__ == "__main__":
 	app.run(debug=True)
