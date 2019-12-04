@@ -635,6 +635,9 @@ def viz52():
 def walmartSKUs():
 	return send_file("static/skus.txt", as_attachment=True)
 
+@app.route('/company', methods=['GET'])
+def company():
+	return render_template("ourCompany.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
