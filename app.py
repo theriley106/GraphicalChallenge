@@ -23,7 +23,7 @@ def gen_nested_lists(lists, n):
 			temp.append(lists.pop(0))
 		a.append(temp)
 	return a
-	
+
 @app.route('/callmemaybe', methods=["GET"])
 def redirectToHerokuApp():
 	return redirect("https://callmemaybeplatform.herokuapp.com/", code=302)
@@ -143,6 +143,7 @@ def other():
 		if val['description'] != "No Info":
 			newList.append(val)
 	other = json.loads(open("static/other.json").read())
+	other = gen_nested_lists(other, 3)
 	return render_template("other.html", DATABASE=newList, OTHER=other)
 
 @app.route('/Jan1/', methods=['GET'])
