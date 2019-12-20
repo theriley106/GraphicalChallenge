@@ -38,18 +38,23 @@
 </style>
 <div class="container sections-wrapper" style="padding-top: 30px !important;">
 <div class="row">
-<div class="col-md-6">
+<div class="col-7">
    <section class="about section">
       <div class="section-inner">
          <h2 class="heading">About Me</h2>
          <div class="content">
             <p>{{ ABOUTME }}</p>
+            <img width="100%" src="{{ url_for('static',filename='columbia.jpg') }}"></img>
          </div>
          <!--//content-->
       </div>
    </section>
    <section class="github section">
-      <div class="section-inner calendar" style="width:100%!important;">
+    <div class="section-inner ">
+
+    <h2 class="heading">GitHub</h2>
+      <div class="calendar" style="width:100%!important;">
+
          <script
             src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
             ></script>
@@ -64,9 +69,10 @@
          </script>
 
       </div>
+  </div>
    </section>
 </div>
-   <div class="section col-md-6">
+   <div class="section col-5">
       <section class="experience section">
          <div class="section-inner">
             <h2 class="heading">Work Experience</h2>
@@ -123,22 +129,37 @@
                     </div>
                   
                </div>
-               
-               
-               <!--//item-->
-               <div class="item">
-                  <h3 class="title"><span class="clemson">Clemson University</span><span class="place"><br><a href="#">Software Engineering Intern</a></span> <br><span class="year" style="font-size:80%;">(Fall 2018)</span></h3>
+               <div class="item row">
+                    <div class="col-8">
+                         <h3 class="title"><span class="clemson">Clemson University</span><span class="place"><br><a href="#">Software Engineering Intern</a></span> <br><span class="year" style="font-size:80%;">(Fall 2018)</span></h3>
                   <p>Alexa Skill Team</p>
+                    </div>
+                    <div class="col-2">
+                      <img class="logoVal" src="{{ url_for('static',filename='clemson.png') }}"></img>
+                    </div>
+                  
                </div>
-               <!--//item-->
-               <div class="item">
-                  <h3 class="title"><span class="lendingclub">Lending Club</span><span class="place"><br><a href="#">Software Engineering Intern</a></span> <br><span class="year" style="font-size:80%;">(Summer 2018)</span></h3>
+
+               <div class="item row">
+                    <div class="col-8">
+                         <h3 class="title"><span class="lendingclub">Lending Club</span><span class="place"><br><a href="#">Software Engineering Intern</a></span> <br><span class="year" style="font-size:80%;">(Summer 2018)</span></h3>
                   <p>Infrastructure & Internal Tools Team</p>
+                    </div>
+                    <div class="col-2">
+                      <img class="logoVal" src="{{ url_for('static',filename='lendingclub.png') }}"></img>
+                    </div>
+                  
                </div>
-               <!--//item-->
-               <div class="item">
-                  <h3 class="title"><span class="tesla">Tesla</span><span class="place"><br><a href="#">Software Engineering Intern</a></span> <br><span class="year" style="font-size:80%;">(Summer 2017)</span></h3>
+
+               <div class="item row">
+                    <div class="col-8">
+                         <h3 class="title"><span class="tesla">Tesla</span><span class="place"><br><a href="#">Software Engineering Intern</a></span> <br><span class="year" style="font-size:80%;">(Summer 2017)</span></h3>
                   <p>Infotainment Automation Team</p>
+                    </div>
+                    <div class="col-2">
+                      <img class="logoVal" src="{{ url_for('static',filename='tesla.jpg') }}"></img>
+                    </div>
+                  
                </div>
                <!--//item-->
             </div>
