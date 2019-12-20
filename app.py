@@ -15,6 +15,15 @@ from operator import itemgetter
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
+def gen_nested_lists(lists, n):
+	a = []
+	while len(lists) > 0:
+		temp = []
+		for i in range(min(len(lists),n)):
+			temp.append(lists.pop(0))
+		a.append(temp)
+	return a
+	
 @app.route('/callmemaybe', methods=["GET"])
 def redirectToHerokuApp():
 	return redirect("https://callmemaybeplatform.herokuapp.com/", code=302)
