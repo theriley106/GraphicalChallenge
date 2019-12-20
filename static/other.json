@@ -146,5 +146,17 @@
 	"description": "Our project \"Cosine\" was given 1st place overall at the UC Berkeley Hackathon in November 2019",
 	"link": "https://devpost.com/software/cosine-bgxpea",
 	"image": "/calhacks.png"
+},
+{
+	"title": "Microsoft Grand Prize Winner at CalHacks 2019",
+	"description": "Our project \"Cosine\" was given the Microsoft Grand Prize at the UC Berkeley Hackathon in November 2019",
+	"link": "https://devpost.com/software/cosine-bgxpea",
+	"image": "/microsoft.png"
+},
+{
+	"title": "Docusign 2nd Place Winner at CalHacks 2019",
+	"description": "Our project \"Cosine\" was given the 2nd Place Docusign Prize at the UC Berkeley Hackathon in November 2019",
+	"link": "https://devpost.com/software/cosine-bgxpea",
+	"image": "/docusign.png"
 }
 ]
