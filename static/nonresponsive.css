@@ -42,12 +42,6 @@ body,
   max-width: none !important;
 }
 
-/* Reset the container */
-.row {
-  width: 1280px!important;
-  max-width: none !important;
-}
-
 /* Demonstrate the grids */
 .col-xs-4 {
   padding-top: 15px;
