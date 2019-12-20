@@ -140,5 +140,11 @@
 	"description": "Our project \"ForeverOnTime\" was given the Best IOT Hack award at Vanderbilt University in October 2017",
 	"link": "https://devpost.com/software/foreverontime",
 	"image": "/vandy.png"
+},
+{
+	"title": "1st Place at CalHacks 2019",
+	"description": "Our project \"Cosine\" was given 1st place overall at the UC Berkeley Hackathon in November 2019",
+	"link": "https://devpost.com/software/cosine-bgxpea",
+	"image": "/calhacks.png"
 }
 ]
