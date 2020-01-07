@@ -1,4 +1,4 @@
-# Graphical Challenge
+# Personal Site
 
 <h1 align="center"><a href="http://christopherlambert.me/">Link to my Personal Site</a></h1>
 
