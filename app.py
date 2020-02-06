@@ -146,6 +146,10 @@ def other():
 	other = gen_nested_lists(other, 3)
 	return render_template("other.html", DATABASE=newList, OTHER=other)
 
+@app.route('/random', methods=['GET'])
+def randomStuff():
+	return "<h1>random stuff</h1>"
+
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
 	import Jan1
