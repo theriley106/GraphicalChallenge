@@ -149,7 +149,7 @@ def other():
 @app.route('/random', methods=['GET'])
 def randomStuff():
 	linkVals = open("static/randomLinks.txt").read().split("\n")
-	return "<h1>random stuff</h1>"
+	return render_template("randomLinks.html", links=linkVals)
 
 @app.route('/Jan1/', methods=['GET'])
 def Jan1():
