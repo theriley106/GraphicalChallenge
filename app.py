@@ -12,6 +12,7 @@ import xUtilities
 import readKaggle
 import getInfo
 from operator import itemgetter
+import bs4
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
@@ -659,6 +660,16 @@ def walmartSKUs():
 @app.route('/company', methods=['GET'])
 def company():
 	return render_template("ourCompany.html")
+
+@app.route('/leetcode', methods=['GET'])
+def getLeetcode():
+	try:
+		res = requests.get("https://leetcode.com/theriley106/")
+		page = bs4.BeautifulSoup(res.text, 'lxml')
+		num = int(page.select(".progress-bar-success")[3].getText().strip().partition(" / ")[0])
+	except:
+		num = 0
+	return jsonify({"value": num})
 
 if __name__ == "__main__":
 	app.run(debug=True)
