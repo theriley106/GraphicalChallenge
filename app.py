@@ -20,7 +20,13 @@ def gen_nested_lists(lists, n):
 	while len(lists) > 0:
 		temp = []
 		for i in range(min(len(lists),n)):
-			temp.append(lists.pop(0))
+			x = lists.pop(0)
+			x['hackathon'] = ""
+			if ' at ' in x['title']:
+				hackathon = x['title'].partition(" at ")[2]
+				x['title'] = x['title'].partition(" at ")[0]
+				x['hackathon'] = hackathon
+			temp.append(x)
 		a.append(temp)
 	return a
 
