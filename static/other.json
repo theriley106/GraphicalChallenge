@@ -158,5 +158,11 @@
 	"description": "Our project \"Cosine\" was given the 2nd Place Docusign Prize at the UC Berkeley Hackathon in November 2019",
 	"link": "https://devpost.com/software/cosine-bgxpea",
 	"image": "/docusign.png"
+},
+{
+	"title": "MLH Most Inspirational Person of 2020",
+	"description": "",
+	"link": "https://top.mlh.io/2020",
+	"image": "/mlh.png"
 }
 ]
