@@ -1,3 +1,8 @@
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 import os
 import glob
 import random
@@ -13,6 +18,7 @@ import readKaggle
 import getInfo
 from operator import itemgetter
 import bs4
+import re
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
@@ -666,8 +672,13 @@ def getLeetcode():
 	try:
 		res = requests.get("https://leetcode.com/theriley106/")
 		page = bs4.BeautifulSoup(res.text, 'lxml')
-		num = int(page.select(".progress-bar-success")[3].getText().strip().partition(" / ")[0])
-	except:
+		num = "INVALID"
+		for val in page.select(".list-group-item"):
+			if 'solved question' in str(val.getText()).lower():
+				print val.getText()
+				num = int(re.findall("\d+", str(val.getText()).lower())[0])
+	except Exception as exp:
+		print exp
 		num = 0
 	return jsonify({"value": num})
 
