@@ -667,6 +667,11 @@ def walmartSKUs():
 def company():
 	return render_template("ourCompany.html")
 
+@app.route('/streaks', methods=['GET'])
+def streaks():
+	return "<h1>Streaks</h1>"
+	# return render_template("ourCompany.html")
+
 @app.route('/leetcode', methods=['GET'])
 def getLeetcode():
 	try:
@@ -684,4 +689,7 @@ def getLeetcode():
 
 if __name__ == "__main__":
 	app.run(debug=True)
+
+
+
 
