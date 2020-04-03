@@ -1,26 +1,5 @@
 [
 {
-	"title": "No-Name Bot",
-	"description": "My open source project was used as a source in a paper from Tufts University about the economic impact of Sneakerbots",
-	"liveSiteURL": "",
-	"link": "http://www.cs.tufts.edu/comp/116/archive/spring2018/dross.pdf",
-	"image": "/tufts.jpg"
-},
-{
-	"title": "ACT Data Visualization",
-	"description": "A Data Visualization I created was used to emphasize the importance of high standardized test scores in the college application process",
-	"liveSiteURL": "",
-	"link": "https://chariotlearning.com/one-secret-to-seriously-strong-test-scores/",
-	"image": "/act.png"
-},
-{
-	"title": "SciKitLearn Contribution",
-	"description": "One of my open-source contributions to the popular Machine Learning framework SciKitLearn was merged on December 21st, 2017",
-	"liveSiteURL": "",
-	"link": "https://mail.python.org/archives/list/scikit-learn-commits@python.org/thread/YGLK6MMWO4GNJ26J4W7TLRPVY5FD4MNM/",
-	"image": "/scikitlearn.png"
-},
-{
 	"title": "Leetcode #989",
 	"description": "I wrote a Leetcode question titled \"Add to Array-Form of Integer\" and Leetcode decided to publish it on their site",
 	"liveSiteURL": "",
@@ -38,6 +17,23 @@
 	"description": "Our project \"Ride Caring\" was given the Best Mobile Hack award at the California Institute of Technology in March 2019",
 	"link": "https://devpost.com/software/ride-caring",
 	"image": "/caltech.png"
+},{
+	"title": "1st Place at CalHacks 2019",
+	"description": "Our project \"Cosine\" was given 1st place overall at the UC Berkeley Hackathon in November 2019",
+	"link": "https://devpost.com/software/cosine-bgxpea",
+	"image": "/calhacks.png"
+},
+{
+	"title": "Microsoft Grand Prize Winner at CalHacks 2019",
+	"description": "Our project \"Cosine\" was given the Microsoft Grand Prize at the UC Berkeley Hackathon in November 2019",
+	"link": "https://devpost.com/software/cosine-bgxpea",
+	"image": "/microsoft.png"
+},
+{
+	"title": "Docusign 2nd Place Winner at CalHacks 2019",
+	"description": "Our project \"Cosine\" was given the 2nd Place Docusign Prize at the UC Berkeley Hackathon in November 2019",
+	"link": "https://devpost.com/software/cosine-bgxpea",
+	"image": "/docusign.png"
 },
 {
 	"title": "Best Hack that Acts on the Physical World",
@@ -142,27 +138,30 @@
 	"image": "/vandy.png"
 },
 {
-	"title": "1st Place at CalHacks 2019",
-	"description": "Our project \"Cosine\" was given 1st place overall at the UC Berkeley Hackathon in November 2019",
-	"link": "https://devpost.com/software/cosine-bgxpea",
-	"image": "/calhacks.png"
-},
-{
-	"title": "Microsoft Grand Prize Winner at CalHacks 2019",
-	"description": "Our project \"Cosine\" was given the Microsoft Grand Prize at the UC Berkeley Hackathon in November 2019",
-	"link": "https://devpost.com/software/cosine-bgxpea",
-	"image": "/microsoft.png"
-},
-{
-	"title": "Docusign 2nd Place Winner at CalHacks 2019",
-	"description": "Our project \"Cosine\" was given the 2nd Place Docusign Prize at the UC Berkeley Hackathon in November 2019",
-	"link": "https://devpost.com/software/cosine-bgxpea",
-	"image": "/docusign.png"
-},
-{
 	"title": "MLH Most Inspirational Person of 2020",
-	"description": "",
+	"description": "Selected as one of Major League Hacking's most inspirational members of 2020",
 	"link": "https://top.mlh.io/2020",
 	"image": "/mlh.jpg"
-}
+},
+{
+	"title": "No-Name Bot",
+	"description": "My open source project was used as a source in a paper from Tufts University about the economic impact of Sneakerbots",
+	"liveSiteURL": "",
+	"link": "http://www.cs.tufts.edu/comp/116/archive/spring2018/dross.pdf",
+	"image": "/tufts.jpg"
+},
+{
+	"title": "ACT Data Visualization",
+	"description": "A Data Visualization I created was used to emphasize the importance of high standardized test scores in the college application process",
+	"liveSiteURL": "",
+	"link": "https://chariotlearning.com/one-secret-to-seriously-strong-test-scores/",
+	"image": "/act.png"
+},
+{
+	"title": "SciKitLearn Contribution",
+	"description": "One of my open-source contributions to the popular Machine Learning framework SciKitLearn was merged on December 21st, 2017",
+	"liveSiteURL": "",
+	"link": "https://mail.python.org/archives/list/scikit-learn-commits@python.org/thread/YGLK6MMWO4GNJ26J4W7TLRPVY5FD4MNM/",
+	"image": "/scikitlearn.png"
+},
 ]
