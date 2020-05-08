@@ -26,15 +26,22 @@
 
 {% for info in infoz %}
 
+
         <div class="col-md-4">
-          <img class="personalProject img-fluid rounded mb-3 mb-md-0" style="height:100px; width:100px;" src="{{ info.image }}" alt="">
-          <h3 class="headerVal">{{info.title}}</h3>
-          <p class="textVal">{{ info.description }}</p>
-          {% if info.liveSite %}
-              <a class="btn btn-success" href="{{info.liveSiteURL}}">View Live Site</a>
+              <div class="card mb-4 box-shadow" style="background-color: #DAE3E7;border: 0px solid rgba(0,0,0,.125);">
+                <center><img class="card-img-top" style="padding-top:10px;height:100px; width:100px;" src="{{info.image}}" alt=""></center>
+                <div class="card-body">
+                  <h3 style="min-height: 30px">{{info.title}}</h3>
+                  <p class="card-text" style="min-height: 50px">{{ info.description }}</p>
+                    <div class="btn-group">
+
+                  {% if info.liveSite %}
+              <center><a class="btn btn-success" href="{{info.liveSiteURL}}">View Live Site</a></center>
           {% endif %}
-          <a class="btn btn-primary" href="{{info.githubLink}}">View Project</a>
-        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
 
 
 {% endfor %}
