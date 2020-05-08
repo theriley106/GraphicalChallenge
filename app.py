@@ -19,6 +19,7 @@ import getInfo
 from operator import itemgetter
 import bs4
 import re
+import time
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
@@ -666,6 +667,11 @@ def walmartSKUs():
 @app.route('/company', methods=['GET'])
 def company():
 	return render_template("ourCompany.html")
+
+@app.route('/duolingo', methods=['GET'])
+def duolingo():
+	result = requests.get("https://www.duolingo.com/2017-06-30/users?username=theriley106&_={}".format(int(time.time()))).json()
+	return jsonify({"streak": result['users'][0]['streak']})
 
 @app.route('/streaks', methods=['GET'])
 def streaks():
