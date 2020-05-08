@@ -26,9 +26,9 @@
               <div class="card mb-4 box-shadow h-80">
                 <center><img class="card-img-top" style="padding-top:10px;height:100px; width:100px;" src="{{info.image}}" alt=""></center>
                 <div class="card-body">
-                  <h3>{{info.title}}<br>{{info.hackathon}}</h3>
-                  <p class="card-text">{{ info.description }}</p>
-                    <div class="btn-group">
+                  <h3 style="min-height: 50px">{{info.title}}<br>{{info.hackathon}}</h3>
+                  <p class="card-text" style="min-height: 80px">{{ info.description }}</p>
+                    <div class="btn-group" style="min-height: 40px">
                       {% if info.link %}
               <center><a class="btn btn-primary" href="{{info.link}}">View</a></center>
                   {% endif %}
