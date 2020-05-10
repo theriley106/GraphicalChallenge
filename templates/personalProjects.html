@@ -34,10 +34,11 @@
                   <h3 style="min-height: 30px">{{info.title}}</h3>
                   <p class="card-text" style="min-height: 50px">{{ info.description }}</p>
                     <div class="btn-group">
-
+                      <center>
                   {% if info.liveSite %}
-              <center><a class="btn btn-success" href="{{info.liveSiteURL}}">View Live Site</a></center>
+              <a class="btn btn-success" href="{{info.liveSiteURL}}">View Live Site</a>
           {% endif %}
+          <a class="btn btn-primary" href="{{info.githubLink}}">View Project</a></center>
                     </div>
                 </div>
               </div>
