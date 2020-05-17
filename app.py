@@ -675,10 +675,6 @@ def duolingo():
 
 @app.route('/streaks', methods=['GET'])
 def streaks():
-	return "<h1>Streaks</h1>"
-
-@app.route('/console', methods=['GET'])
-def console():
 	return render_template("streaks.html")
 
 @app.route('/leetcode', methods=['GET'])
