@@ -688,7 +688,6 @@ def getLeetcode():
 				print val.getText()
 				num = int(re.findall("\d+", str(val.getText()).lower())[0])
 	except Exception as exp:
-		print exp
 		num = 0
 	return jsonify({"value": num})
 
