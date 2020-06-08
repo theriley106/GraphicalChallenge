@@ -24,3 +24,4 @@
 
 <img src="/static/other.png"/>
 
+
