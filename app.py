@@ -691,6 +691,10 @@ def getLeetcode():
 		num = 0
 	return jsonify({"value": num})
 
+@app.route('/columbiaOnline', methods=['GET'])
+def columbiaOnline():
+	return render_template("columbiaOnline.html")
+
 if __name__ == "__main__":
 	app.run(debug=True)
 
