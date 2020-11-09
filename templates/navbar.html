@@ -93,6 +93,27 @@ ul li a{
 #idVal {
     width:200px;
 }
+
+.leetcode-icon {
+  background-image: url("{{ url_for('static',filename='leetcodelogo.png') }}");
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.linkedin-icon {
+  background-image: url("{{ url_for('static',filename='linkedin.png') }}");
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.leetcode-button {
+  height: 30px;
+  width: 30px;
+}
   </style>
 </head>
 <body>
@@ -104,9 +125,11 @@ ul li a{
                 <h1 class="name">Christopher Lambert</h1>
                 <h2 class="desc">Aspiring Software Engineer</h2>
                 <ul class="social list-inline">
-                    <li><a href="https://www.linkedin.com/in/~chris/"><i class="fa fa-linkedin"></i></a></li>
+
+                  <li><a href="https://www.linkedin.com/in/~chris/"><i class="linkedin-icon"></i></a></li>
                     <li><a href="https://github.com/theriley106"><i class="fa fa-github-alt"></i></a></li>
                     <li><a href="/resume.pdf"><i class="fa fa-file"></i></a></li>
+                    <li><a href="https://leetcode.com/theriley106/"><i class="leetcode-icon"></i></a></li>
                 </ul>
             </div><!--//profile-->
             <a class="btn btn-cta-primary pull-right" href="mailto:lambertcr@outlook.com" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
