@@ -110,6 +110,14 @@ ul li a{
   width: 30px;
 }
 
+.resume-icon {
+  background-image: url("{{ url_for('static',filename='cv.png') }}");
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
 .leetcode-button {
   height: 30px;
   width: 30px;
@@ -128,7 +136,7 @@ ul li a{
 
                   <li><a href="https://www.linkedin.com/in/~chris/"><i class="linkedin-icon"></i></a></li>
                     <li><a href="https://github.com/theriley106"><i class="fa fa-github-alt"></i></a></li>
-                    <li><a href="/resume.pdf"><i class="fa fa-file"></i></a></li>
+                    <li><a href="/resume.pdf"><i class="resume-icon"></i></a></li>
                     <li><a href="https://leetcode.com/theriley106/"><i class="leetcode-icon"></i></a></li>
                 </ul>
             </div><!--//profile-->
