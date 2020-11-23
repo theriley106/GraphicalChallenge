@@ -1,7 +1,10 @@
-# encoding=utf8
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
+try:
+	# encoding=utf8
+	import sys
+	reload(sys)
+	sys.setdefaultencoding('utf8')
+except:
+	pass
 
 import os
 import glob
@@ -372,7 +375,7 @@ def Jan21():
 		data['totalSentiment'] = float(data['Nootropics']['Sentiment'] + data['StackAdvice']['Sentiment']) / 2
 		#data['totalSentiment'] = ((data['Nootropics']['Sentiment'] * data['Nootropics']['Occurances']) + (data['StackAdvice']['Sentiment'] * data['StackAdvice']['Occurances'])) / data['TotalOccurances']
 	for data in DATABASE:
-		print data['totalSentiment']
+		print(data['totalSentiment'])
 		data['Nootropics']['Sentiment'] = round(data['Nootropics']['Sentiment'], 4)
 		data['StackAdvice']['Sentiment'] = round(data['StackAdvice']['Sentiment'], 4)
 	DATABASE = sorted(DATABASE, key=lambda k: k['totalSentiment'])
@@ -685,7 +688,7 @@ def getLeetcode():
 		num = "INVALID"
 		for val in page.select(".list-group-item"):
 			if 'solved question' in str(val.getText()).lower():
-				print val.getText()
+				print(val.getText())
 				num = int(re.findall("\d+", str(val.getText()).lower())[0])
 	except Exception as exp:
 		num = 0

@@ -9,8 +9,11 @@ from selenium import webdriver
 import bs4
 import requests
 import threading
-from uszipcode import ZipcodeSearchEngine
-search = ZipcodeSearchEngine()
+try:
+	from uszipcode import ZipcodeSearchEngine
+	search = ZipcodeSearchEngine()
+except:
+	pass
 
 def monthToMonth(shortMonth):
 	try:
