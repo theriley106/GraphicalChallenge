@@ -26,6 +26,13 @@ import time
 sys.path.insert(0, 'pythonFiles/')
 app = Flask(__name__, static_url_path="", static_folder="static")
 
+@app.before_request
+def before_request():
+	if request.url.startswith('http://'):
+		url = request.url.replace('http://', 'https://', 1)
+		code = 301
+		return redirect(url, code=code)
+
 def gen_nested_lists(lists, n):
 	a = []
 	while len(lists) > 0:
