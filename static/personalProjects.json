@@ -1,5 +1,19 @@
 [
 {
+	"title": "Daily Standup Question",
+	"description": "Web app that aggregates daily standup questions and uses GPT-2 to generate new ones",
+	"liveSiteURL": "http://dailystandupquestion.com/",
+	"githubLink": "https://github.com/theriley106/DailyStandupQuestion",
+	"image": "/question.png"
+},
+{
+	"title": "Spotify Diff",
+	"description": "Web app to generate playlists containing the 'Liked Song' overlap between 2 users on Spotify",
+	"liveSiteURL": "http://SpotifyDiff.com/",
+	"githubLink": "https://github.com/theriley106/SpotifyDiff",
+	"image": "/spotify.png"
+},
+{
 	"title": "The WSB Index",
 	"description": "Algorithmic trading strategy to predict market volatility from the post/comment frequency on a popular trading forum",
 	"liveSiteURL": "",
@@ -28,11 +42,11 @@
 	"image": "/captcha.png"
 },
 {
-	"title": "FormerPizzaHuts",
-	"description": "A data science exercise to programmatically find buildings that used to be Pizza Hut restaurants.",
-	"liveSiteURL": "",
-	"githubLink": "https://github.com/theriley106/FormerPizzaHuts",
-	"image": "/pizzahut.png"
+	"title": "IsElonRicherThanJeffBezos.com",
+	"description": "Answering 'Is Elon Musk Currently The Richest Person In The World?' given real-time $TSLA stock price",
+	"liveSiteURL": "http://IsElonRicherThanJeffBezos.com",
+	"githubLink": "https://github.com/theriley106/IsElonRicherThanJeffBezos.com",
+	"image": "/tesla.png"
 },
 {
 	"title": "Echo Linguistics",
@@ -40,6 +54,13 @@
 	"liveSiteURL": "",
 	"githubLink": "https://github.com/theriley106/EchoLinguistics",
 	"image": "/echo.png"
+},
+{
+	"title": "FormerPizzaHuts",
+	"description": "A data science exercise to programmatically find buildings that used to be Pizza Hut restaurants.",
+	"liveSiteURL": "",
+	"githubLink": "https://github.com/theriley106/FormerPizzaHuts",
+	"image": "/pizzahut.png"
 },
 {
 	"title": "TrueResume",
