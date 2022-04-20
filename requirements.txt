@@ -3,7 +3,7 @@ SQLAlchemy==1.1.9
 SQLAlchemy-Utils==0.32.11
 psycopg2==2.7.1
 beautifulsoup4
-requests==2.12.3
+requests==2.20.0
 Flask==0.12.1
 selenium==2.53.6
 textblob==0.15.0
