@@ -481,7 +481,7 @@ def llm():
 @app.route('/fetch', methods=["POST"])
 def fetch():
 	info = request.json
-	return str(canvas.answer_question(LLM[0], question=info['title'], debug=False)), 200
+	return jsonify({'output': str(canvas.answer_question(LLM[0], question=info['title'], debug=False))})
 
 @app.route('/Feb1/', methods=['GET'])
 def Feb1():
