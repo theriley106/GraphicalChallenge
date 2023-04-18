@@ -483,8 +483,6 @@ def fetch():
 	info = request.json
 	print(info)
 	title = info['title']
-	if LLM[0] == None:
-		LLM[0] = canvas.fetch_df_for_course("166560")
 	return str(canvas.answer_question(LLM[0], question=title, debug=False))
 
 @app.route('/Feb1/', methods=['GET'])
