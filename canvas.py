@@ -1,5 +1,4 @@
 import sys
-from PIL import Image
 import time
 import json
 import threading
