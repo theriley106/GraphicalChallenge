@@ -9,7 +9,7 @@ except:
 import os
 import glob
 import random
-from flask import Flask, request, render_template, request, url_for, redirect, Markup, Response, send_file, send_from_directory, make_response, jsonify
+from flask import Flask, request, render_template, request, url_for, redirect, Response, send_file, send_from_directory, make_response, jsonify
 import csv
 import sqlite3 as lite
 import requests
