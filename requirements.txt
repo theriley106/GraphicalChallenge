@@ -15,3 +15,4 @@ geopy==1.11.0
 openai==0.27.2
 matplotlib
 plotly
+pandas
