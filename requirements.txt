@@ -6,7 +6,7 @@ SQLAlchemy-Utils==0.32.11
 psycopg2==2.7.1
 beautifulsoup4
 requests
-Flask==0.12.1
+Flask==2.2.2
 selenium==2.53.6
 textblob==0.15.0
 uszipcode==0.1.3
