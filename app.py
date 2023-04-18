@@ -467,14 +467,15 @@ def Jan31():
 	#DATABASE=Jan25.getDatabase()
 	return render_template("Jan31.html", DATABASE=DATABASE)
 
-LLM = [None]
+LLM = [None, False]
 
 import canvas
 @app.route('/llm', methods=['GET'])
 def llm():
-	if LLM[0] == None:
+	if LLM[1] == False:
 		df = canvas.fetch_df_for_course("166560")
 		LLM[0] = df
+		LLM[1] = True
 
 	return render_template("llm.html")
 
@@ -483,6 +484,10 @@ def fetch():
 	info = request.json
 	print(info)
 	title = info['title']
+	if LLM[1] == False:
+		df = canvas.fetch_df_for_course("166560")
+		LLM[0] = df
+		LLM[1] = True
 	return str(canvas.answer_question(LLM[0], question=title, debug=False))
 
 @app.route('/Feb1/', methods=['GET'])
