@@ -479,6 +479,10 @@ def llm():
 
 	return render_template("llm.html")
 
+@app.route('/fractions', methods=['GET'])
+def fractions():
+	return render_template("fractions.html")
+
 @app.route('/fetch', methods=["POST"])
 def fetch():
 	info = request.json

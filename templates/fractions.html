@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/num9G2hXmq+3pr4NtE+GG4x1R8ADl4+g1ERjKp" crossorigin="anonymous">
+  <title>Fractions</title>
+  <style>
+    html, body {
+      
+        height: 92vh;
+      background-color: black;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    h1, input {
+      text-align: center;
+    }
+    input {
+      font-size: 121px;
+      color: white;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+    #counter {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-center">
+      <h1 id="question" style="color: white;" class="text-light"></h1>
+      <input id="answer" type="text" class="form-control" placeholder="Enter your answer" onkeydown="handleKeyDown(event)">
+    </div>
+  </div>
+  <div id="counter"></div>
+
+  <script>
+    const questionElement = document.getElementById('question');
+    const answerElement = document.getElementById('answer');
+    const counterElement = document.getElementById('counter');
+    let correctAnswer;
+    let correctCount = 0;
+    let totalCount = 0;
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function generateQuestion() {
+      const numerator = getRandomInt(1, 50);
+      const denominator = getRandomInt(1, 50);
+      correctAnswer = `${numerator}/${denominator}`;
+      questionElement.textContent = `What's ${numerator} / ${denominator} as a fraction?`;
+    }
+
+    function updateCounter() {
+      counterElement.textContent = `${correctCount} / ${totalCount}`;
+    }
+
+    function checkAnswer() {
+      const userAnswer = answerElement.value.trim();
+      const userAnswerAsFloat = parseFloat(userAnswer);
+      if (userAnswer === correctAnswer || (!isNaN(userAnswerAsFloat) && Math.abs(userAnswerAsFloat - parseFloat(correctAnswer)) < 0.0001)) {
+        document.body.style.backgroundColor = 'green';
+        correctCount++;
+      } else {
+        document.body.style.backgroundColor = 'red';
+      }
+      totalCount++;
+      updateCounter();
+    }
+
+    function handleKeyDown(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        checkAnswer();
+        generateQuestion();
+        answerElement.value = '';
+      }
+    }
+
+    generateQuestion();
+  </script>
+  <footer class="text-center text-lg-start fixed-bottom" style="color: white;">
+    <p >
+        <center>
+Made with <3 by <a href="http://christopherlambert.me/">Christopher Lambert</a>
+    </center></p>
+</footer>
+</body>
+</html>
